@@ -101,6 +101,7 @@
     {footer}
     {block:hook:hook_below_footer:page_block}
 
+    {swretail_plugin_place_bottom}
 </body>
 
 
