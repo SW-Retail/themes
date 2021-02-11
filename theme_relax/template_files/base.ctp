@@ -1,8 +1,5 @@
 <html>
 
-
-tesst
-
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -86,8 +83,6 @@ tesst
     <!-- Message for cookies -->
     <div id="cookie-message"><div id="cookie-message-text"></div><button onclick="swShop.cookieDismiss('ok');return false;" >OK</button></div>
 
-
-    {block:hook:hook_before_header:page_block}
     {header}
     {block:hook:hook_after_header:page_block}
 
