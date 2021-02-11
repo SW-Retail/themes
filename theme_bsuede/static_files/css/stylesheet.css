@@ -827,6 +827,9 @@ input[type='checkbox'] {
     h1, h2{
         font-size: 1.7rem;
     }
+	.fixed-top {
+        display: grid;
+    }
 }
 @media (min-width: 577px) and (max-width: 767px){
     .menu-level-0 .menu-item a{
@@ -1272,10 +1275,6 @@ fieldset[disabled] .btn-addtocart.active {
 .image-button{
     margin-top: -4rem;
     padding-bottom: 2rem;
-}
-
-body {
-    margin-top:250px;
 }
 
 .aio_rotated {
