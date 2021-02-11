@@ -2,9 +2,23 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 <div class="row">
     <div class="col-6" id="customer_modify">
-        <h3>Accountgegevens bijwerken</h3>
+
+        <div class="row">
+            <div class="col-8">
+                <h3>Accountgegevens bijwerken</h3>
+            </div>
+
+            <div class="col-4">
+                <a href="/customer_orders" id="customer_orders_link" >Ordergeschiedenis inzien </a>
+            </div>
+
+        </div>
+
+
         <div id="customer_modify_form">
-            <div class="row" >
+            <div class="col-12 row" >
+
+
 
                 <!-- do not just change the backend names as stuff will not be stored! -->
                 {form:customer_modify_form}
