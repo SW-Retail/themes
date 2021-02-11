@@ -82,7 +82,6 @@
 
     <!-- Message for cookies -->
     <div id="cookie-message"><div id="cookie-message-text"></div><button onclick="swShop.cookieDismiss('ok');return false;" >OK</button></div>
-    {block:hook:hook_before_header:page_block}
     {header}
     {block:hook:hook_after_header:page_block}
 
@@ -102,7 +101,6 @@
     {footer}
     {block:hook:hook_below_footer:page_block}
 
-      {swretail_plugin_place_bottom}
 </body>
 
 

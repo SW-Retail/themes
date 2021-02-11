@@ -1,8 +1,8 @@
 {templater_start}
 {template_version:__TEMPLATEVERSION_HERE__}
 
-<div class="headergrey fixed-top pt-3">
-
+<div class="sticky-top headergrey fixed-top">
+    {block:hook:hook_before_header:page_block}
     <div class="container pb-3">
         <div class="container">
             <div class="row">
