@@ -2,10 +2,18 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 <div class="row">
     <div class="col-6" id="customer_modify">
-        <h3>Accountgegevens bijwerken</h3>
-        <div id="customer_modify_form">
-            <div class="row" >
+        <div class="row">
+            <div class="col-8">
+                <h3>Accountgegevens bijwerken</h3>
+            </div>
 
+            <div class="col-4">
+                <a href="/customer_orders" id="customer_orders_link" >Ordergeschiedenis inzien </a>
+            </div>
+
+        </div>
+        <div id="customer_modify_form">
+            <div class="row col-12">
                 <!-- do not just change the backend names as stuff will not be stored! -->
                 {form:customer_modify_form}
                 <div class="row {uitoggle_customer_loyalty}">
@@ -13,6 +21,7 @@
                     <input type="text" class="form-control" readonly edit="0" value="{loyaltypoints}">
                 </div>
                 <div class="row">
+
                     Email adres
                     {input:adres_email:validate_notempty:validate_email}
 
@@ -41,6 +50,8 @@
                     <button  id="sw_customer_modify_button" class="tmplt_sales_color" onclick="swCustomer.modifyCustomerInfo();return false">Wijzigen</button>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>
