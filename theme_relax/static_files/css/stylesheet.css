@@ -702,6 +702,10 @@ input[type='checkbox'] {
     .footer h3{
         font-size: 2rem!important;
     }
+	
+	.fixed-top {
+        display: grid;
+    }
 }
 @media (min-width:326px) and (max-width: 576px){
     .mob-text-center{
@@ -1105,10 +1109,6 @@ fieldset[disabled] .btn-addtocart.active {
 
 #sw_customer_login:hover,#checkout_button:hover {
     cursor:hand;
-}
-
-body {
-    margin-top:190px;
 }
 
 
