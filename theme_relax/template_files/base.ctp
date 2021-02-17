@@ -11,6 +11,8 @@
     <meta name="keywords"    content="{meta_keywords}" />
     <meta name="title"       content="{meta_title}" />
     <meta name="robots"      content="{meta_seo_tags}">
+    
+    <title>{meta_title}</title>
 
 
     <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
