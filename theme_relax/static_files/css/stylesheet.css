@@ -562,6 +562,10 @@ input[type='checkbox'] {
     width: 15px;
 }
 
+.fixed-top {
+    display: grid;
+}
+
 
 /* mobile */
 @media (max-width:767px)
@@ -701,10 +705,6 @@ input[type='checkbox'] {
 
     .footer h3{
         font-size: 2rem!important;
-    }
-	
-	.fixed-top {
-        display: grid;
     }
 }
 @media (min-width:326px) and (max-width: 576px){
