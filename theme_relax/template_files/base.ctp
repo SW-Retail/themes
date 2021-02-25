@@ -89,31 +89,6 @@
     {block:hook:hook_after_header:page_block}
 
 
-
-    {if:current_url:=:/thisistheold344fd82js781k047.html}
-        <div class="headerimg">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 col-md-6 offset-md-6 my-auto mob-text-right">
-                        <h1 class="d-inline">Zomer</h1><span class="d-inline">deals</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
-                        <a class="btn btn-white">Bekijk</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="headergrey usp pt-3 pb-3">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12 col-sm-6 col-md-4 mob-text-center md-text-right"><i class="fas fa-truck d-inline"></i> <p class="d-inline">Altijd gratis verzending</p></div>
-                    <div class="col-12 col-sm-6 col-md-4 mob-text-center md-text-left"><i class="fas fa-shopping-cart d-inline"></i> <p class="d-inline">Voordelig winkelen</p></div>
-                    <div class="col-12 col-md-4 mob-text-center"><i class="far fa-frown d-inline"></i> <p class="d-inline">Niet tevreden? Geld terug</p></div>
-                </div>
-            </div>
-        </div>
-    {if_end}
     <div class="container">
         <!-- main content -->
         <div class="main mt-5" id="main_content">
