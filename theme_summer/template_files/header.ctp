@@ -74,6 +74,7 @@
         <div class="container">
             <div class="row sub-header visible-small ">
                 <div class="grouped pl-3">
+                    <input class="form-control search-control"  type="text" value="" placeholder="Zoeken..."/>
                     <button class="menu-collapse" onclick="swShop.toggleMenu();return false;"><i class="fas fa-bars"></i></button>
                 </div>
             </div>
