@@ -563,9 +563,8 @@ input[type='checkbox'] {
 }
 
 .fixed-top {
-    display: grid;
-}
-
+        display: grid;
+    }
 
 /* mobile */
 @media (max-width:767px)
@@ -706,6 +705,7 @@ input[type='checkbox'] {
     .footer h3{
         font-size: 2rem!important;
     }
+	
 }
 @media (min-width:326px) and (max-width: 576px){
     .mob-text-center{
