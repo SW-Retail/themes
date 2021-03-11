@@ -672,6 +672,10 @@ input[type='checkbox'] {
     width: 20px;
 }
 
+.fixed-top {
+    display: grid;
+}
+
 /* mobile */
 @media (max-width: 576px){
     .menu-level-0 .menu-item a{
@@ -826,9 +830,6 @@ input[type='checkbox'] {
 
     h1, h2{
         font-size: 1.7rem;
-    }
-	.fixed-top {
-        display: grid;
     }
 }
 @media (min-width: 577px) and (max-width: 767px){
