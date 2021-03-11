@@ -28,11 +28,8 @@
             </div>
 
             <div class="article_remaining text-center">
-                <div class="article_header">
-                    <p><b>{*article_name}  </b></p>
-
-                </div>
-                <div class="row"><p>{*article_ovw_subline}</p> </div>
+                <div class="article_header"><p><b>{*article_name}  </b></p></div>
+                <div class="article_header"><p>{*article_ovw_subline}</p></div>
                 <div class="{uitoggle_pricing_normal}" >
                     <h3 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h3>
                 </div>
