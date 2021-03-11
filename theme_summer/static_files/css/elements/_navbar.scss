@@ -1,0 +1,215 @@
+.shopping-cart-number {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.menu_customer {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 2;
+    display: none;
+    font-size: 20px;
+    list-style-type: none;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px 40px 20px 20px;
+
+    a{
+        text-decoration: none;
+        color:#000;
+        font-size:15px;
+    }
+
+    &:hover{
+        display:table-row-group;
+    }
+}
+
+#sw_customer_options:hover + .menu_customer{
+    display:table-row-group;
+}
+
+.headertop{
+    ul{
+        margin-right: 0;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.navigationbar{
+    .navigation{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .main-navigation{
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        >div#navCloser{
+            display: none;
+        }
+    }
+    #menu-toggler, #navCloser{
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .headergrey{
+        overflow: hidden;
+    }
+
+    .navigationbar{
+        .main-navigation{
+            position: absolute;
+            top: 0;
+            right: -300px;
+            height: 100vh;
+            background-color: #fff;
+            width: 300px;
+            z-index: 3;
+            transition: ease .3s;
+            position: fixed;
+            overflow-y: scroll;
+
+            input{
+                margin-top: 45px;
+                padding-left: 1rem!important;
+                padding-right: 1rem!important;
+            }
+            
+            &.active{
+                right: -5px;
+                transition: ease .3s;
+            }
+            
+            >div#navCloser{
+                display: block;
+                position: absolute;
+                top: 12.5px;
+                right: 2rem;
+            }
+
+            .menu-level-0{
+                width: 100%;
+                position: absolute;
+                top: 100px;
+
+                >li{
+                    padding-right: 2rem;
+                    border-bottom: 1px solid #ebebeb;
+                    min-height: 50px;
+                    position: relative;
+                    padding-top: 12px;
+                    padding-left: 2rem;
+
+                    &:first-child{
+                        border-top: 1px solid #ebebeb;
+                    }
+
+                    &.menu-has-children{
+                        cursor: pointer;
+                        &.menu-closed{
+                            &:after{
+                                content: '\f078';
+                                font-family: 'Font Awesome 5 Free';
+                                font-size: 1rem;
+                                color: #6f6f6f;
+                                position: absolute;
+                                left: unset;
+                                right: 2rem;
+                                top: 12.5px;
+                            }
+                        }
+                        &.menu-open{
+                            &:after{
+                                content: '\f077';
+                                font-family: 'Font Awesome 5 Free';
+                                font-size: 1rem;
+                                color: #6f6f6f;
+                                position: absolute;
+                                left: unset;
+                                right: 2rem;
+                                top: 12.5px;
+                            }
+                        }
+                    }
+                }
+
+                .menu-level-1{
+                    >li{
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                        padding-top: 12px;
+                        min-height: 25px;
+                        position: relative;
+
+                        &.menu-has-children{
+                            cursor: pointer;
+                            &.menu-closed{
+                                &:after{
+                                    content: '\f078';
+                                    font-family: 'Font Awesome 5 Free';
+                                    font-size: 1rem;
+                                    color: #6f6f6f;
+                                    position: absolute;
+                                    left: unset;
+                                    right: 2rem;
+                                    top: 12.5px;
+                                }
+                            }
+                            &.menu-open{
+                                &:after{
+                                    content: '\f077';
+                                    font-family: 'Font Awesome 5 Free';
+                                    font-size: 1rem;
+                                    color: #6f6f6f;
+                                    position: absolute;
+                                    left: unset;
+                                    right: 2rem;
+                                    top: 12.5px;
+                                }
+                            }
+                        }
+
+                        &:last-child{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                .menu-level-2{
+                    >li{
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+        
+        .backdrop{
+            &.active{
+                background-color: rgba(0,0,0,0.2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100vh;
+                z-index: 2;
+                position: fixed;
+            }
+        }
+    }
+}

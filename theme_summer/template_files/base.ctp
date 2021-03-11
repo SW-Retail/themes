@@ -15,6 +15,7 @@
     <title>{meta_title}</title>
 
     <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
+    <script src="/webshop_1/js/script.js"></script>
 
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
@@ -39,6 +40,7 @@
     <link rel="stylesheet" href="{sw_cdn_url}/plugins/splide/splide.min.css">
 
     <!-- SW-Retail theme summer -->
+
 
     {swretail_plugin_place_head}
 
