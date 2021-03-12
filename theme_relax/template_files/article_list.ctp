@@ -2,7 +2,7 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 {remark:Render article in a list}
 
-<div class="col-6 col-md-3 article_item"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
+<div class="{sw_setting_products_per_row_mobile}  {sw_setting_products_per_row} article_item"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
 
     {if:overlay_text:<>:}
         <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
