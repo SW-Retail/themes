@@ -1,7 +1,7 @@
 {templater_start}
 {template_version:__TEMPLATEVERSION_HERE__}
 {remark:Render article in a list}
-<div class="{sw_setting_products_per_row} article_item"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
+<div class="{sw_setting_products_per_row_mobile}  {sw_setting_products_per_row}   article_item"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
 
 
     {if:overlay_text:<>:}
