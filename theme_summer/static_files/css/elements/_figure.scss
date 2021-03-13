@@ -1,0 +1,35 @@
+.cms_content{
+    figure{
+        width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: 0;
+        position: relative;
+
+        img{
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        figcaption{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.1);
+
+            >a{
+                text-align: center;
+                color: #fff;
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                font-size: 28px;
+                font-weight: 700;
+            }
+        }
+    }
+}

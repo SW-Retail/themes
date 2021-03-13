@@ -543,6 +543,21 @@ fieldset[disabled] .btn-headerimg.active {
   }
 }
 
+.cms_content figure {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0;
+  position: relative;
+}
+
+.cms_content figure img {
+  width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .cms_content figure figcaption {
   position: absolute;
   top: 0;
@@ -563,53 +578,53 @@ fieldset[disabled] .btn-headerimg.active {
   font-weight: 700;
 }
 
-.summer-header {
+.generic-header {
   max-width: 1250px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.summer-header .block-container {
+.generic-header .block-container {
   background-color: rgba(26, 36, 78, 0.2);
   height: 100%;
 }
 
-.summer-header .container, .summer-header .row.cms_content {
+.generic-header .container, .generic-header .row.cms_content {
   height: 100%;
 }
 
 /* Verticaal centreren header content */
-.summer-header .row.cms_content > div.col-12 {
+.generic-header .row.cms_content > div.col-12 {
   margin-top: auto;
   margin-bottom: auto;
 }
 
 /* Button text hoofdletters */
-.summer-header .row.cms_content > div.col-12 .btn {
+.generic-header .row.cms_content > div.col-12 .btn {
   text-transform: uppercase;
 }
 
 /* Header hoogtes op responsive hoofdletters */
 @media screen and (max-width: 576px) {
-  .summer-header {
+  .generic-header {
     height: 300px;
   }
 }
 
 @media screen and (min-width: 576px) {
-  .summer-header {
+  .generic-header {
     height: 450px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .summer-header {
+  .generic-header {
     height: 500px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .summer-header {
+  .generic-header {
     height: 775px;
   }
 }
@@ -1583,22 +1598,6 @@ input[type=checkbox], input[type=radio] {
 
 .align-center {
   text-align: center;
-}
-
-figure {
-  display: block;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-figure img {
-  max-width: 100%;
-  height: auto;
-}
-
-figure figcaption {
-  font-size: 12px;
 }
 
 .search-wrapper {
