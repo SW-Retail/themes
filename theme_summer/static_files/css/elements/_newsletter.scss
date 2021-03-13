@@ -1,0 +1,34 @@
+.newsletter{
+    background-color: #E1C3C4;
+    width: 100%;
+}
+
+.newsletter h1{
+    font-size: 2rem;
+}
+
+.newsletter p{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.newsletter span{
+    color: #ababab;
+}
+
+.newsletter input {
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important;
+    width: 60%;
+}
+
+@media screen and (max-width: 576px){
+    .newsletter h1{
+        font-size: 1.5rem;
+    }  
+    .newsletter p{
+        font-size: 1rem;
+    }
+}
