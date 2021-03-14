@@ -89,7 +89,7 @@
 
     <div class="container">
         <!-- main content -->
-        <div class="main" id="main_content">
+        <div class="main mt-3" id="main_content">
             <div id="content" >
                 <!-- here the content will be inserted -->
                 {content}
