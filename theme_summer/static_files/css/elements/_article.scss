@@ -101,6 +101,12 @@ ul.article_images_all > li > img {
             font-size: 18px;
         }
     }
+
+    .article_item{
+        width: 50%;
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
 }
 
 @media (min-width:768px){
