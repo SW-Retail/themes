@@ -30,6 +30,8 @@
     <link rel="stylesheet"  type="text/css" href="/webshop_stylesheet?v={version}"/>
 
     <script src="{sw_cdn_url}/plugins/bootstrap/js/bootstrap.bundle.min.js?v={version}"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/css/fancy-menu.css?v={version}"/>
 
     <!-- The webshop app -->
     <script src="/javascript.js?v={version}"></script>
