@@ -43,8 +43,9 @@
                 <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"></i></div>
             </div>
             <div class="row main-navigation main-menu menu-mobile " id="sw_menu" >
-                <div id="navCloser"><i class="fas fa-times"></i></div>
+
                 <div class="col-sm-12">
+                    <div id="navCloser"><i class="fas fa-times"></i></div>
                     <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
                     {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
                 </div>
