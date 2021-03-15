@@ -17,7 +17,7 @@ ul{
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    z-index: 999;
+    z-index: 1100;
 }
 
 .sw-modal-content {
@@ -43,7 +43,7 @@ ul{
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.01s, opacity 0.01s 0s, transform 0.01s;
-    z-index: 999;
+    z-index: 1100;
 }
 .blocked-show {
     opacity: 1;
