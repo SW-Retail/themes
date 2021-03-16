@@ -1,6 +1,9 @@
 {templater_start}
 {template_version:__TEMPLATEVERSION_HERE__}
-<div class="row">
+
+<div class="row"><div class="col-12">{breadcrumb_content}</div></div>
+
+<div class="row mt-2">
     <!-- filter over 2 columns, will automaticall collapse on mobile -->
     <div class="col-md-2">
         {if:theme_group_filter:=:1}
