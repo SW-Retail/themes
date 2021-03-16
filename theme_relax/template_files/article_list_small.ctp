@@ -20,7 +20,7 @@
                 </div>
             </div>
              <div class="article_header pt-3">
-                <b>{artoms}</b>
+                <b>{*article_name}</b>
                 <p>{artfabr}</p>
             </div>
             <div class="{uitoggle_pricing_normal}" >
