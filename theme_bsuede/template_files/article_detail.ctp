@@ -1,6 +1,8 @@
 {templater_start}
 {template_version:__TEMPLATEVERSION_HERE__}
 
+<div class="row"><div class="col-12">{breadcrumb_content}</div></div>
+
 <div class="row">
     <div class="col-12"><button onclick="swShop.gotoPreviousURL();return false;"><i class="fas fa-arrow-left"></i>Terug</button></div>
     <div class="col-12 col-md-6" style="position:relative;">
