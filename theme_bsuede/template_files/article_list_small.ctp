@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="row article-information">
-                <div class="col-12 text-center"><b>{artoms}</b></div>
+                <div class="col-12 text-center"><b>{*article_name}</b></div>
                 <div class="col-12 text-center article_margin">
 
                     <div class="{uitoggle_pricing_normal}" >
