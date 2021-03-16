@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="article_header pt-3 col-12">
-                    <b class="tmplt_base_color_text">{artoms}</b>
+                    <b class="tmplt_base_color_text">{*article_name}</b>
                 </div>
                 <div class="{uitoggle_pricing_normal} col-12">
                     <h3 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h3>
