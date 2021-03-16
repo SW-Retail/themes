@@ -684,7 +684,7 @@ a:hover {
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
-  z-index: 999;
+  z-index: 1100;
 }
 
 .sw-modal-content {
@@ -714,7 +714,7 @@ a:hover {
   transition: visibility 0s linear 0.01s, opacity 0.01s 0s, -webkit-transform 0.01s;
   transition: visibility 0s linear 0.01s, opacity 0.01s 0s, transform 0.01s;
   transition: visibility 0s linear 0.01s, opacity 0.01s 0s, transform 0.01s, -webkit-transform 0.01s;
-  z-index: 999;
+  z-index: 1100;
 }
 
 .blocked-show {
