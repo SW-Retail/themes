@@ -16,7 +16,7 @@
     </div>
 
     <!-- Navigation -->
-    <div class="tmplt_base_color tmplt_base_color_text navigationbar">
+    <div class="navigationbar">
         <div class="container">
             <div class="row navigation">
                 <div class="col-6">
@@ -42,6 +42,12 @@
                 </div>
                 <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"></i></div>
             </div>
+        </div>
+    </div>
+
+            <!-- Navigation -->
+     <div class="tmplt_base_color tmplt_base_color_text navigationbar">
+         <div class="container">
             <div class="row main-navigation main-menu menu-mobile " id="sw_menu" >
 
                 <div class="col-sm-12">
