@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row navigation">
                 <div class="col-6">
-                    <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" style="max-width:300px;"/></a>
+                    <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" style="max-width:300px;height:40px;"/></a>
                 </div>
                 <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center">
                     <input class="form-control search-control"  type="text" value="" placeholder="Zoeken..."/>
