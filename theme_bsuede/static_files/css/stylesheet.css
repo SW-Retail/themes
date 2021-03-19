@@ -1138,3 +1138,8 @@ fieldset[disabled] .btn-addtocart.active {
     opacity:0.3;
     z-index:1;
 }
+
+ul.menu-level-0 {
+    padding-left:0px;
+}
+
