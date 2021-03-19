@@ -1041,3 +1041,10 @@ fieldset[disabled] .btn-addtocart.active {
      padding-top:10px;
 	
 }
+
+
+#sw_menu ul.menu-level-0 {
+    padding-left:0px;
+    margin-top:10px;
+    margin-bottom:10px
+}
