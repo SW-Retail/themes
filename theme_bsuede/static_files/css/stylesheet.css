@@ -1139,7 +1139,10 @@ fieldset[disabled] .btn-addtocart.active {
     z-index:1;
 }
 
-ul.menu-level-0 {
+#sw_menu ul.menu-level-0 {
     padding-left:0px;
+    margin-top:10px;
+    margin-bottom:10px
 }
+
 
