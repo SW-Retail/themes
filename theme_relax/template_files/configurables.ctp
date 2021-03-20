@@ -2,7 +2,7 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 <!-- color definitions, these will appear in the configuration menu of sw-retail  -->
 {template_def:Hoofdkleur:De hoofdkleur in het thema van uw webshop:color:.tmplt_base_color:background-color:#f9f9f9}
-{template_def:Hoofdkleur tekst:De tekstkleur voor tekst die in de hoofdkleur valt:color:.tmplt_base_color_text,ul.menu-vertical.tmplt_base_color_text a, .header *,.footer *,.menu-level-0 a:color:#5b5b5b}
+{template_def:Hoofdkleur tekst:De tekstkleur voor tekst die in de hoofdkleur valt:color:.tmplt_base_color_text,ul.menu-vertical.tmplt_base_color_text a,.tmplt_base_color_text .fas, .header *,.footer *,.menu-level-0 a:color:#5b5b5b}
 {template_def:Steunkleur:De steunkleur van uw webshop:color:.tmplt_attention_color:color:#8e7cc3}
 {template_def:'Call to action kleur':De kleur die aandacht trekt om meer verkoop te maken:color:.tmplt_sales_color,.tmplt_sales_color\:hover:background-color:#8fce00}
 {template_def:Selectie kleur:Deze kleur wordt toegepast op gekozen items:color:.alert-success:background-color:#351c75}
