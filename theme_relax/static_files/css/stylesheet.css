@@ -1041,3 +1041,12 @@ fieldset[disabled] .btn-addtocart.active {
     margin-top:10px;
     margin-bottom:10px
 }
+
+.visible-small.main-menu 
+{
+    font-size:26px;
+}
+
+.main-menu .fas {
+    line-height:1.5;
+}
