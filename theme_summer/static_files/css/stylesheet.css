@@ -332,7 +332,7 @@ fieldset[disabled] .btn-headerimg.active {
 
 .menu_customer {
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 0;
   z-index: 2;
   display: none;
