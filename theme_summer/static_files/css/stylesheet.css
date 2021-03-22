@@ -726,6 +726,7 @@ a:hover {
 }
 
 .blocked-show {
+  z-index:99999;
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
