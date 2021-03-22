@@ -48,22 +48,20 @@
 
             <!-- Navigation -->
      <div class="tmplt_base_color tmplt_base_color_text navigationbar">
-
-
-
          <div class="container">
-
 
              <div class="visible-small main-menu">
                  <div class="row mobile tmplt_base_color_text ">
-
 
                          <div class="col-8 "><i class="fas fa-bars  " id="menu-toggler" data-menustyle="fancy"></i></div>
                          <div class="col-4">
                              <div class="pull-right">
                                  <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
-                                 <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i>asdfasdf</a>
-                                 <a href="/checkout" id="sw_shoppingcart" ><i class="fas fa-shopping-cart tmplt_attention_color"></i> </a>
+                                 <div style="display:inline-block">
+                                     <a class='sw_customer-options_button position-relative ' id="sw_customer_options_small" class="cursor-pointer"> <i class="fas fa-user-alt tmplt_attention_color "></i></a>
+                                     {block:menu:customer-menu:class=menu_customer}
+                                 </div>
+                                 <a href="/checkout" id="sw_shoppingcart_small" ><i class="fas fa-shopping-cart tmplt_attention_color"></i> </a>
                              </div>
                          </div>
                  </div>
