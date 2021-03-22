@@ -529,6 +529,9 @@ li.filter-block-header {
 #sw_customer_options:hover + .menu_customer{
     display:table-row-group;
 }
+#sw_customer_options_small:hover + .menu_customer{
+    display:table-row-group;
+}
 
 
 .menu_customer:hover{
