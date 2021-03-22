@@ -334,7 +334,7 @@ fieldset[disabled] .btn-headerimg.active {
   position: absolute;
   top: 30px;
   right: 0;
-  z-index: 2;
+  z-index: 10;
   display: none;
   font-size: 20px;
   list-style-type: none;
