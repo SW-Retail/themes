@@ -37,27 +37,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="visible-small h-100">
-                    <div class="row h-100">
-                        <div class="col-8 my-auto">
-<!--                            <h3>{shopname}</h3>-->
-                        </div>
-                        <div class="col-4 my-auto">
-                            <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
-                            <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i></a>
-                            <a href="/checkout" id="sw_shoppingcart" ><i class="fas fa-shopping-cart tmplt_attention_color"></i> </a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
     <div class="header tmplt_base_color  tmplt_base_color_text pb-2 pt-2">
         <div class="container">
             <div class="row sub-header visible-small ">
-                <div class="grouped pl-3">
-                    <input class="form-control search-control visible-small"  type="text" value="" placeholder="Zoeken"/>
-                    <button class="menu-collapse" onclick="swShop.toggleMenu();return false;"><i class="fas fa-bars"></i></button>
+                <div class="grouped pl-3 mobile-menu">
+
+                    <div class="col-8 "><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"></i></div>
+                    <div class="col-3 ">
+                        <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
+                        <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i>asdfasdf</a>
+                        <a href="/checkout" id="sw_shoppingcart" ><i class="fas fa-shopping-cart tmplt_attention_color"></i> </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -70,12 +65,26 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 menu main-menu menu-mobile" id="sw_menu">
-                    {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
+
+
+        <div class="tmplt_base_color tmplt_base_color_text navigationbar">
+            <div class="container">
+                <div class="row main-navigation main-menu menu-mobile " id="sw_menu" >
+                    <div class="col-sm-12">
+                        <div id="navCloser"><i class="fas fa-times"></i></div>
+                        <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
+                        {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
+                    </div>
+
+                </div>
+                <div class="row backdrop" id="backdropper">
+                    <!-- -->
                 </div>
             </div>
         </div>
+
+
+
+
     </div>
 </div>

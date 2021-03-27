@@ -331,9 +331,10 @@ fieldset[disabled] .btn-headerimg.active {
 }
 
 .menu_customer {
+  display:none;
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 15px;
+  right: -20px;
   z-index: 2;
   display: none;
   font-size: 20px;
@@ -342,6 +343,8 @@ fieldset[disabled] .btn-headerimg.active {
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 0px 40px 20px 20px;
+  margin-left: -80px;
+  
 }
 
 .menu_customer a {
@@ -357,6 +360,9 @@ fieldset[disabled] .btn-headerimg.active {
 #sw_customer_options:hover + .menu_customer {
   display: table-row-group;
 }
+
+
+
 
 .headertop ul {
   margin-right: 0;
@@ -387,9 +393,11 @@ fieldset[disabled] .btn-headerimg.active {
   cursor: pointer;
 }
 
+
+/* mobile */
 @media screen and (max-width: 767px) {
   .headergrey {
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
   .navigationbar .main-navigation {
     position: absolute;
@@ -814,6 +822,7 @@ a:hover {
 }
 
 .blocked-show {
+  z-index:99999;
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
@@ -1040,17 +1049,7 @@ li.pager-item {
   float: right;
 }
 
-/*
-.article_remaining  {
-    white-space: nowrap;
-    overflow: hidden;
-}
 
-.article_header {
-    white-space: nowrap;
-    overflow: hidden;
-}
-*/
 .article_header, .article_content h3 {
   color: #323232;
   text-transform: uppercase;
@@ -1280,32 +1279,6 @@ li.filter-block-header {
   margin-left: -10px;
 }
 
-.menu_customer {
-  display: none;
-  position: absolute;
-  font-size: 20px;
-  list-style-type: none;
-  z-index: 2;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-left: -80px;
-  padding: 0px 40px 20px 20px;
-}
-
-.menu_customer a {
-  text-decoration: none;
-  color: #000;
-  font-size: 15px;
-}
-
-#sw_customer_options:hover + .menu_customer {
-  display: table-row-group;
-}
-
-.menu_customer:hover {
-  display: table-row-group;
-}
 
 .padding-nav {
   padding: 15px 0px;
@@ -1961,3 +1934,5 @@ fieldset[disabled] .btn-headerimg.active {
   color: #ffffff;
   padding: 2px 10px 2px 10px;
 }
+
+

@@ -8,7 +8,7 @@
 
 <div class="row">
 
-    <div class="col-4" id="customer_reset_password_form">
+    <div class="col-sm-6" id="customer_reset_password_form">
         <div class="col-12">
             Wachtwoord
             <input type="password" id="customer_reset_password_password" class="form-control">

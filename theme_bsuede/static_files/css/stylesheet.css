@@ -359,18 +359,6 @@ ul.menu-horizontal, ul.menu-horizontal li {
     padding:0px;
 }
 
-.menu-item {
-    list-style-type: none;
-
-}
-
-ul.menu-fat-sublevel1 ul.menu-level-1>li>a {
-    font-weight:800;
-}
-
-ul.menu-margin-level2 ul.menu-level-2 {
-    margin-left:50px;
-}
 
 .menu-collapse,.menu-collapse:hover
 {
@@ -381,15 +369,6 @@ ul.menu-margin-level2 ul.menu-level-2 {
     color:#000;
 }
 
-.menu {
-
-    height:30px;
-}
-
-.menu a {
-    text-decoration:none;
-    color:#000;
-}
 
 .menu_customer {
     display: none;
@@ -678,8 +657,8 @@ input[type='checkbox'] {
 
 /* mobile */
 @media (max-width: 576px){
-    .menu-level-0 .menu-item a{
-        color: #000;
+    .mobile-menu {
+        font-size:24px;
     }
     div.header .row [class^=col]  {
         margin:0px;
@@ -703,58 +682,11 @@ input[type='checkbox'] {
         margin-top:1rem;
     }
 
-    .menu {
-        display: inline-block;
-        background:#fff;
-        padding:10px;
-        z-index:999;
-        height:auto;
-    }
-
-    ul.menu-level-0  li.menu-closed ul.menu-level-1  {
-        display:none;
-    }
-
-    ul.menu-level-1  li.menu-closed ul.menu-level-2  {
-        display:none;
-    }
 
     .footer ul{
         padding-left: 0rem;
     }
 
-    .menu-level-1.open {
-        display:block;
-    }
-
-    .main-menu li {
-        padding-left: 0em;
-    }
-    ul.menu-level-0 {
-        padding-left:0px;
-        margin-top:0px;
-    }
-    ul.menu-level-0 > li.menu-closed:after,
-    ul.menu-level-1 > li.menu-closed:after
-    {
-        font-family: 'Font Awesome 5 Free';
-        font-weight:900;
-        font-size:20px;
-        content: '\f0d7';
-        left: -1em;
-        color:#000;
-    }
-
-    ul.menu-level-0 > li.menu-open:before,
-    ul.menu-level-1 > li.menu-open:before
-    {
-        font-family: 'Font Awesome 5 Free';
-        font-weight:900;
-        font-size:20px;
-        content: '\f0d8';
-        left: -1em;
-        color:#000;
-    }
 
     li.filter-block-header:before {
         font-family: 'Font Awesome 5 Free';
@@ -785,9 +717,6 @@ input[type='checkbox'] {
         display:none;
     }
 
-    .menu-level-0 > li.menu-item {
-        color:#000;
-    }
 
     .article_image_list {
         height: 400px;
@@ -832,10 +761,8 @@ input[type='checkbox'] {
         font-size: 1.7rem;
     }
 }
+
 @media (min-width: 577px) and (max-width: 767px){
-    .menu-level-0 .menu-item a{
-        color: #000;
-    }
     .mob-t-1{
         margin-top:1rem;
     }
@@ -844,58 +771,11 @@ input[type='checkbox'] {
         text-align: center;
     }
 
-    .menu {
-        display: inline-block;
-        background:#fff;
-        padding:10px;
-        z-index:999;
-        height:auto;
-    }
-
-    ul.menu-level-0  li.menu-closed ul.menu-level-1  {
-        display:none;
-    }
-
-    ul.menu-level-1  li.menu-closed ul.menu-level-2  {
-        display:none;
-    }
 
     .footer ul{
         padding-left: 0rem;
     }
 
-    .menu-level-1.open {
-        display:block;
-    }
-
-    .main-menu li {
-        padding-left: 0em;
-    }
-    ul.menu-level-0 {
-        padding-left:0px;
-        margin-top:0px;
-    }
-    ul.menu-level-0 > li.menu-closed:after,
-    ul.menu-level-1 > li.menu-closed:after
-    {
-        font-family: 'Font Awesome 5 Free';
-        font-weight:900;
-        font-size:20px;
-        content: '\f0d7';
-        left: -1em;
-        color:#000;
-    }
-
-    ul.menu-level-0 > li.menu-open:before,
-    ul.menu-level-1 > li.menu-open:before
-    {
-        font-family: 'Font Awesome 5 Free';
-        font-weight:900;
-        font-size:20px;
-        content: '\f0d8';
-        left: -1em;
-        color:#000;
-    }
 
     li.filter-block-header:before {
         font-family: 'Font Awesome 5 Free';
@@ -925,10 +805,6 @@ input[type='checkbox'] {
     .menu-mobile {
         display:none;
     }
-
-    .menu-level-0 > li.menu-item {
-        color:#000;
-    }
     .visible-large {
         display:none;
     }
@@ -954,9 +830,6 @@ input[type='checkbox'] {
 /* desktop */
 @media (min-width:768px)
 {
-    .menu-level-0 .menu-item a{
-        color: #fff;
-    }
     .filter-block {
         margin-bottom:20px;
     }
@@ -965,11 +838,6 @@ input[type='checkbox'] {
         margin-top:unset;
     }
 
-    .menu > ul{
-        margin: 0;
-        display: inline-block;
-        padding:0;
-    }
     .visible-large {
         display:default;
     }
@@ -977,55 +845,6 @@ input[type='checkbox'] {
         display:none;
     }
 
-    .menu {
-        display: block;
-    }
-
-    .menu-level-0 > li.menu-item a {
-        text-decoration:none;
-
-    }
-
-    .menu-level-0  li.menu-item:hover .menu-level-1, .menu-level-0  li.menu-item:hover .menu-level-2 {
-        display:block;
-        padding-left: 0rem;
-    }
-
-    .menu-collapse
-    {
-        display:none;
-    }
-    .menu-level-0 > li {
-        display: inline-block;
-    }
-
-    .menu-level-1 > li {
-        display:block;
-        float:left;
-        padding:10px;
-    }
-
-
-    .menu-level-1 > li.menu-item a {
-        text-decoration:none;
-        color:#000;
-    }
-
-    .menu-level-1 {
-        display:none;
-        position: absolute;
-        left:0px;
-        width:100%;
-        background-color: #ffffff;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        color:#000;
-        padding: 0px 40px 20px 20px;
-    }
-
-    .menu-level-0 >li  {
-        padding-right:20px;
-    }
 
     .headergrey p{
         font-size: 0.9rem;
@@ -1319,3 +1138,11 @@ fieldset[disabled] .btn-addtocart.active {
     opacity:0.3;
     z-index:1;
 }
+
+#sw_menu ul.menu-level-0 {
+    padding-left:0px;
+    margin-top:10px;
+    margin-bottom:10px
+}
+
+

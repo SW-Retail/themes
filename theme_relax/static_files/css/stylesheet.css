@@ -529,6 +529,9 @@ li.filter-block-header {
 #sw_customer_options:hover + .menu_customer{
     display:table-row-group;
 }
+#sw_customer_options_small:hover + .menu_customer{
+    display:table-row-group;
+}
 
 
 .menu_customer:hover{
@@ -1036,8 +1039,17 @@ fieldset[disabled] .btn-addtocart.active {
     padding:2px 10px 2px 10px;
 }
 
+#sw_menu ul.menu-level-0 {
+    padding-left:0px;
+    margin-top:10px;
+    margin-bottom:10px
+}
 
-.main-navigation {
-     padding-top:10px;
-	
+.visible-small.main-menu 
+{
+    font-size:26px;
+}
+
+.main-menu .fas {
+    line-height:1.5;
 }
