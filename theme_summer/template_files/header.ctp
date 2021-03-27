@@ -2,7 +2,7 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 
 
-<div class="sticky-top headergrey fixed-top" style="z-index:9999">
+<div class="sticky-top headergrey fixed-top" style="z-index:1049">
     {block:hook:hook_before_header:page_block}
     <!-- Socials or USP header -->
     <div class="headertop">
