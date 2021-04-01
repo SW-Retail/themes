@@ -53,7 +53,7 @@
              <div class="visible-small main-menu">
                  <div class="row mobile tmplt_base_color_text ">
 
-                         <div class="col-8 "><i class="fas fa-bars  " id="menu-toggler" data-menustyle="fancy"></i></div>
+                         <div class="col-8 "><i class="fas fa-bars  " id="menu-toggler" data-menustyle="fancy"  onclick="swShop.mobileMenuShow()" ></i></div>
                          <div class="col-4">
                              <div class="pull-right">
                                  <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
@@ -73,7 +73,7 @@
 
              <div class="row main-navigation main-menu " id="sw_menu" >
                 <div class="col-sm-12">
-                    <div id="navCloser"><i class="fas fa-times"></i></div>
+                    <div id="navCloser"  onclick="swShop.mobileMenuShow(false);"><i class="fas fa-times"></i></div>
                     <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
                     {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
                 </div>
