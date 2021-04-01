@@ -46,7 +46,7 @@
             <div class="row sub-header visible-small ">
                 <div class="grouped pl-3 mobile-menu">
 
-                    <div class="col-8 "><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"></i></div>
+                    <div class="col-8 "><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"  onclick="swShop.mobileMenuShow()"></i></div>
                     <div class="col-3 ">
                         <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
                         <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i>asdfasdf</a>
@@ -71,7 +71,7 @@
             <div class="container">
                 <div class="row main-navigation main-menu menu-mobile " id="sw_menu" >
                     <div class="col-sm-12">
-                        <div id="navCloser"><i class="fas fa-times"></i></div>
+                        <div id="navCloser"  onclick="swShop.mobileMenuShow(false);"><i class="fas fa-times"></i></div>
                         <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
                         {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
                     </div>
