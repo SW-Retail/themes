@@ -660,7 +660,7 @@ input[type='checkbox'] {
 }
 
 /* mobile */
-@media (max-width: 576px){
+@media (max-width: 768px){
     .mobile-menu {
         font-size:24px;
     }
@@ -925,6 +925,7 @@ input[type='checkbox'] {
         font-size: 1rem;
     }
 }
+
 /* desktop */
 @media (min-width:768px)
 {
