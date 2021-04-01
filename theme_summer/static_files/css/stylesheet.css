@@ -627,7 +627,7 @@ fieldset[disabled] .btn-headerimg.active {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 20px;
+    right: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
