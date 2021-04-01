@@ -2,7 +2,7 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 
 
-<div class="sticky-top headergrey fixed-top" style="z-index:9999">
+<div class="sticky-top headergrey fixed-top" style="z-index:1049">
     {block:hook:hook_before_header:page_block}
     <!-- Socials or USP header -->
     <div class="headertop">
@@ -40,7 +40,7 @@
                         {block_end} 
                     </div>
                 </div>
-                <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"></i></div>
+                <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" onclick="navbarController()" data-menustyle="fancy"></i></div>
             </div>
             <div class="row main-navigation main-menu menu-mobile" id="sw_menu">
                 <div id="navCloser"><i class="fas fa-times"></i></div>
