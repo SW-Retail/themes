@@ -24,6 +24,7 @@
                 <a href="{rl_web_url}"><img style="max-width:100px" src="/{rl_web_logo}" alt="{rl_web_title}"/></a>
                 <p>{*theme_article_description}</p>
             </div>
+            {block:article_stock}
             <div class="col-12 mt-3 mb-3">
                 {define_c:st_pr_sizeselect:1}
 
