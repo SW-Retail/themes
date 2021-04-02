@@ -24,6 +24,7 @@
                 <a href="{rl_web_url}"><img style="max-width:100px" src="/{rl_web_logo}" alt="{rl_web_title}"/></a>
                 <p>{*theme_article_description}</p>
             </div>
+            {block:article_stock}
             <div class="col-12">
                 <div class="{uitoggle_pricing_normal}">
                     <h1 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h1>
