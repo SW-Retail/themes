@@ -3,6 +3,7 @@
 {remark: renders articles in a small list}
 
 <div class="col-6 col-md-3 article_item_small"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
+    {block:article_list_small_top:optional}
     <a title="{artoms}" href="{article_link}" class="article_item_link">
         <div class="article_content">
             <div class="article_image_list_mini_container">
@@ -33,4 +34,5 @@
             </div>
         </div>
     </a>
+    {block:article_list_small_bottom:optional}
 </div>
