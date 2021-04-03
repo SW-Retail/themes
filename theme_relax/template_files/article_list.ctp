@@ -3,7 +3,7 @@
 {remark:Render article in a list}
 
 <div class="{sw_setting_products_per_row_mobile}  {sw_setting_products_per_row} article_item"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
-
+    {block:article_list_top:optional}
     {if:overlay_text:<>:}
         <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
     {if_end}
@@ -42,6 +42,7 @@
             </div>
         </div>
     </a>
+    {block:article_list_bottom:optional}
 </div>
 
 
