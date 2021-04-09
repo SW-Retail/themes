@@ -553,6 +553,9 @@ input[type='checkbox'] {
 /* mobile */
 @media (max-width:767px)
 {
+    .icon-bar {
+       top:50%;
+    }
     h2{
         font-size: 1.3rem;
     }
