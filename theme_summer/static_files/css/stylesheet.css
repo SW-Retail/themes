@@ -514,6 +514,9 @@ fieldset[disabled] .btn-headerimg.active {
     z-index: 2;
     position: fixed;
   }
+  .icon-bar {
+    top:50%;
+  }
 }
 
 .newsletter {
