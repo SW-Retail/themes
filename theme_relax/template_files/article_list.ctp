@@ -27,6 +27,17 @@
                 </div>
             </div>
 
+            
+            {if:st_pr_buy_on_ovw:=:true}
+                {if:maatbalk:=:}
+                    <div>
+                        <button class="btn-addtocart"  onclick="swShop.addToCartExecute({article_id},1);event.stopPropagation();return false;"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                {if_end}
+            {if_end}
+
+            
+            
             <div class="article_remaining text-center">
                 <div class="article_header"><p><b>{*article_name}  </b></p></div>
                 <div class="article_header"><p>{*article_ovw_subline}</p></div>
