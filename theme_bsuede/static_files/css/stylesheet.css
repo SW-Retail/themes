@@ -1203,7 +1203,7 @@ fieldset[disabled] .btn-addtocart.active {
     position:absolute;
     top:30px;
     right:0px;
-    width:100px;
+    min-width:100px;
 
     text-align:center;
     text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
