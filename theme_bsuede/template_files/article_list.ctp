@@ -19,8 +19,12 @@
                     {if_end}
                 </div>
             </div>
+
             <div class="row article-information">
-                <div class="col-12 text-center"><b>{artoms}</b></div>
+                <div class="col-12 text-center">
+                    <p><b>{*article_name}</b></p>
+                    <p>{*article_ovw_subline} </p>
+                </div>
                 <div class="col-12 text-center article_margin">
                     <div class="{uitoggle_pricing_normal}" >
                         <h3 id="article_baseprice" class="tmplt_base_color_text"> {sap_price:format:currency}</h3>
@@ -31,9 +35,23 @@
                         </div>
                         <h3 id="article_baseprice" class="tmplt_base_color_text"> {sap_price:format:currency}</h3>
                     </div>
+
                 </div>
+
                 <div class="col-12 text-center m-0 addtocart-pos">
-                    <div class="addtocart mx-auto"><i class="fas fa-chevron-right"></i></div>
+                    {if:st_pr_buy_on_ovw:=:true}
+                        {if:maatbalk:=:}
+                        <div>
+                            <button class="btn-addtocart "  onclick="swShop.addToCartExecute({article_id},1);event.stopPropagation();return false;"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                        {if_end}
+                        {if:maatbalk:<>:}
+                            <div class="addtocart mx-auto"><i class="fas fa-chevron-right"></i></div>
+                        {if_end}
+                    {if_end}
+                    {if:st_pr_buy_on_ovw:<>:true}
+                        <div class="addtocart mx-auto"><i class="fas fa-chevron-right"></i></div>
+                    {if_end}
                 </div>
             </div>
         </div>
