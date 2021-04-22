@@ -14,7 +14,7 @@
                                 <img class="img-fluid" src="{article_image:0}" alt="{article_image_alt:0}"/>
                             {if_end}
                             {if:has_image:=:true}
-                                <img class="img-fluid" src="/image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
+                                <img class="img-fluid" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
                             {if_end}
                         </div>
                     </div>
