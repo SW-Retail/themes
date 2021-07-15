@@ -7,7 +7,7 @@
     <div class="col-12"><button onclick="swShop.gotoPreviousURL();return false;"><i class="fas fa-arrow-left"></i>Terug</button></div>
     <div class="col-12 col-md-6 col-lg-7" style="position:relative;">
         {if:overlay_text:<>:}
-            <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
+            <div class="article-item-overlayer aio_rotated {overlay_text_type}">{overlay_text}</div>
         {if_end}
         {if:product_zoom:=:true}
             <div class="article-item-overlayer zoom_overlay"><i class="fas fa-search-plus"></i></div>
