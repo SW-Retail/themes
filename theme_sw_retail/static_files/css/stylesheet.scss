@@ -246,11 +246,6 @@ input.form-control[readonly]
     outline:none;
 }
 
-input.form-control.has_error {
-    -webkit-appearance: none;
-    border-color: #aa0000;
-}
-
 input.form-control:read-only {
     background-color:#eee;
 }
@@ -637,3 +632,4 @@ ul.has-cms-content p {
 @import 'elements/footer';
 @import 'elements/article';
 @import 'elements/cart';
+@import 'elements/contactform';

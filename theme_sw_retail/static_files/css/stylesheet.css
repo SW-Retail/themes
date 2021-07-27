@@ -237,11 +237,6 @@ input.form-control[readonly] {
   outline: none;
 }
 
-input.form-control.has_error {
-  -webkit-appearance: none;
-  border-color: #aa0000;
-}
-
 input.form-control:-moz-read-only {
   background-color: #eee;
 }
@@ -1175,5 +1170,33 @@ div.article-list-small > p {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+#sw-form-contact input,
+#sw-form-contact textarea {
+  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+#sw-form-contact input:hover, #sw-form-contact input:focus,
+#sw-form-contact textarea:hover,
+#sw-form-contact textarea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#sw-form-contact input.has_error,
+#sw-form-contact textarea.has_error {
+  border: 1px solid #ff1e1e;
+}
+
+@media screen and (max-width: 1000px) {
+  .cms_content .row .col-4 {
+    width: 100%;
+  }
+  .cms_content .row .col-4 + .col-8 {
+    width: 100%;
   }
 }

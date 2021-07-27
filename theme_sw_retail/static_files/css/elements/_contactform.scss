@@ -1,0 +1,33 @@
+
+
+#sw-form-contact {
+    input,
+    textarea {
+        border: 1px solid transparent;
+        background: rgba(0,0,0,.05);
+        transition: .3s ease;
+
+        &:hover,
+        &:focus {
+            border: 1px solid rgba(0,0,0,.25);
+        }
+
+        &.has_error{
+            border: 1px solid rgba(255,30,30,1);
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cms_content {
+        .row {
+            .col-4 {
+                width: 100%;
+
+                & + .col-8 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
