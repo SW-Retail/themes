@@ -23,6 +23,7 @@
 .article_remaining  {
     white-space: nowrap;
     overflow: hidden;
+    padding-left:20px;
 }
 
 .article_header {
@@ -38,12 +39,17 @@
 
 .article_item_link {
     text-decoration: none;
-
+    color:#000;
+}
+.article_item_link:hover {
+    text-decoration: none;
+    color:#000;
 }
 
 .article_content_list {
     padding:10px;
 }
+
 .article_content_list p {
     margin:0px;
 }
