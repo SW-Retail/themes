@@ -60,7 +60,7 @@
     }
     .main-navigation{
         display: flex;
-        justify-content: center;
+        justify-content: start;
         position: relative;
 
         >div#navCloser{
@@ -69,6 +69,16 @@
     }
     #menu-toggler, #navCloser{
         cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navigationbar{
+        .main-navigation{
+            .menu-level-2{
+                padding-left: 0;
+            }
+        }
     }
 }
 
@@ -128,6 +138,10 @@
                     padding-top: 12px;
                     padding-left: 2rem;
 
+                    &:before{
+                        display: none;
+                    }
+
                     &:first-child{
                         border-top: 1px solid #ebebeb;
                     }
@@ -171,6 +185,10 @@
                         min-height: 25px;
                         position: relative;
 
+                        &:before{
+                            display: none;
+                        }
+
                         &.menu-has-children{
                             cursor: pointer;
                             &.menu-closed{
@@ -209,7 +227,7 @@
 
                 .menu-level-2{
                     >li{
-                        padding-left: 1rem;
+                        padding-left: 0;
                     }
                 }
             }

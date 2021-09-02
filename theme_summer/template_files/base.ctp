@@ -17,7 +17,8 @@
     <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
+    <!-- <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/> -->
+    <link rel="stylesheet"  type="text/css" href="{static_content}/css/bootstrap.css"/>
 
     <link rel="stylesheet" type="text/css" href="{static_content}/css/stylesheet.css?v={version}"/>
 
