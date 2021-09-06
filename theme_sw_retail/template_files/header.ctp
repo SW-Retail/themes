@@ -2,7 +2,6 @@
 {template_version:swretail_r5_9_34}
 
 <div class="headergrey" style="z-index:1049">
-    {block:hook:hook_before_header:page_block}
     <!-- Socials or USP header -->
     <div class="headertop">
         <div class="container">
