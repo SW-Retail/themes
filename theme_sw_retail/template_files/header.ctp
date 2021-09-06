@@ -23,7 +23,7 @@
                 <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center">
                     <input class="form-control search-control"  type="text" value="" placeholder="Zoeken..."/>
                 </div>
-                <div class="col-6 col-lg-2 pr-4 d-flex align-items-center justify-content-end">
+                <div class="col-6 col-lg-2 pr-4 d-flex align-items-center justify-content-end large">
                     <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="cursor-pointer"><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
                     <div  class="position-relative">
                         <a class='sw_customer-options_button position-relative' id="sw_customer_options" class="cursor-pointer"> <i class="fas fa-user-alt tmplt_attention_color "></i></a>
