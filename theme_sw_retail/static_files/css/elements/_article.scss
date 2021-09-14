@@ -184,4 +184,9 @@ div.article-list-small > p {
             }
         }
     }
+    .article-item-overlayer {
+        &.aio_rotated {
+            top: 50px;
+        }
+    } 
 }

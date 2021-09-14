@@ -1,6 +1,7 @@
 .shopping-cart-number {
     position: absolute;
     top: -10px;
+    left: 15px;
     right: -15px;
     height: 20px;
     width: 20px;
@@ -87,7 +88,12 @@
         overflow: hidden;
     }
 
+    .shopping-cart-number {
+        left: 10px;
+    }
+
     .navigationbar{
+        padding-right: 1rem;
         .main-navigation{
             position: absolute;
             top: 0;
