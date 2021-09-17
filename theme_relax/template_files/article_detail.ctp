@@ -1,6 +1,29 @@
 {templater_start}
 {template_version:__TEMPLATEVERSION_HERE__}
 
+
+{block_declare:cart_button:clear}
+    {if:st_pr_show_amt:=:true}
+    <div class="col-12  {uitoggle_addtocart}  ">
+        <div class="input-group ">
+            <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
+            <div class="input-group-append ">
+                <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen</button>
+
+            </div>
+        </div>
+    </div>
+    {if_end}
+
+    {if:st_pr_show_amt:<>:true}
+    <div class="col-12 {uitoggle_addtocart}">
+        <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">Aan winkelhwagen toevoegen</button>
+    </div>
+
+    {if_end}
+
+{block_end}
+
 <div class="row"><div class="col-12">{breadcrumb_content}</div></div>
 
 <div class="row">
@@ -63,10 +86,9 @@
                     {tierprices}
                 </div>
             </div>
-            
-            <div class="col-12 {uitoggle_addtocart}">
-                <button class="btn btn-addtocart   sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen</button>
-            </div>
+
+            {block:cart_button}
+
             {block_end}
 
         </div>
