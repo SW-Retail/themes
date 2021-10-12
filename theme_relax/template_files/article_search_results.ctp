@@ -3,6 +3,11 @@
 
 <div class="row"><div class="col-12">{breadcrumb_content}</div></div>
 
+{if:st_category_navigation:=:true}
+    {block:auto_categories}
+{if_end}
+
+
 <div class="row mt-2">
     <!-- filter over 2 columns, will automatically collapse on mobile -->
     <div class="col-md-2" id="category-filter" data-view="filter">
