@@ -138,7 +138,10 @@
                     Ander Afleveradres
                     {checkbox:alternate_address}
                 </div>
-
+                
+                <div class="hide">
+                    {input:service_point_id:id=service_point_id}
+                </div>
 
                 {form_end}
 
