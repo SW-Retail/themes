@@ -52,7 +52,7 @@
 
                     {if:st_pr_sizeselect:=:1}
                         <div class="{hide_sizeruler_selection}">Kies uw maat</div>
-                        <select class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
+                        <select data-article-id="{swi_hl_id}" class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
                     {if_end}
 
                     {if:st_pr_sizeselect:=:0}
@@ -61,7 +61,7 @@
                     </div>
                     {define:st_pr_sizeselect:1}
                     {remark:We work with a hidden selector that gets set by the buttons}
-                    <select class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
+                    <select data-article-id="{swi_hl_id}" class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
                     {define:st_pr_sizeselect:0}
 
                 {if_end}
