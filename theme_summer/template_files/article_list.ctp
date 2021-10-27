@@ -30,7 +30,7 @@
             
             {if:st_pr_buy_on_ovw:=:true}
                 {if:maatbalk:=:}
-                <div>
+                <div class="{uitoggle_addtocart}">
                     <button class="btn-addtocart"  onclick="swShop.addToCartExecute({article_id},1);event.stopPropagation();return false;"><i class="fas fa-cart-plus"></i></button>
                 </div>
                 {if_end}
