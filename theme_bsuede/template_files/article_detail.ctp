@@ -3,25 +3,25 @@
 
 
 {block_declare:cart_button:clear}
-    {if:st_pr_show_amt:=:true}
-    <div class="col-12  {uitoggle_addtocart}  ">
-        <div class="input-group ">
-            <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
-            <div class="input-group-append ">
-                <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
+    {if:article_filter.iaf_is_virtual:<>:1}
+        {if:st_pr_show_amt:=:true}    
+            <div class="col-12  {uitoggle_addtocart}  ">
+                <div class="input-group ">
+                    <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
+                    <div class="input-group-append ">
+                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        {if_end}
+
+        {if:st_pr_show_amt:<>:true}
+            <div class="col-12 {uitoggle_addtocart}">
+                <button class="btn btn-addtocart  sw-add-to-cart-button tmplt_sales_color" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
+            </div>
+        {if_end}
     {if_end}
-
-    {if:st_pr_show_amt:<>:true}
-    <div class="col-12 {uitoggle_addtocart}">
-        <button class="btn btn-addtocart  sw-add-to-cart-button tmplt_sales_color" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
-    </div>
-
-    {if_end}
-
 {block_end}
 
 
