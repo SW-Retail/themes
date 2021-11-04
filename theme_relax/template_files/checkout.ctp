@@ -205,10 +205,10 @@
                     {block_declare:sw_sendmethods}
 
                     {block_declare:send_method_line:clear}
-                    <div class='webshop_select_option webshop_select_send_option' sendid='{sendid}' sendprice='{sendprice}' is_selected='{is_selected}' onclick='swSendMethods.selectSendMethod(this);return false;' type='sw_selection' >
-                        {name} {price}
-                    </div>
-                    <div class="send_methods_pickuplocations" id="send_methods_pickuplocations_{sendid}"></div>
+                        <div class='webshop_select_option webshop_select_send_option' sendid='{sendid}' sendprice='{sendprice}' is_selected='{is_selected}' onclick='swSendMethods.selectSendMethod(this);return false;' type='sw_selection' data-load-delivery="{ism_show_retrieval_location}">
+                            {name} {price}
+                        </div>
+                        <div class="send_methods_pickuplocations" id="send_methods_pickuplocations_{sendid}"></div>
                     {block_end}
                     {sendmethods:send_method_line}
 
