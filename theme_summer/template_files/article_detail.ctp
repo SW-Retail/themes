@@ -48,34 +48,38 @@
                 <p>{*theme_article_description}</p>
             </div>
             {block:article_stock}
-            
+
+                {remark:Virtual product display.}
                 {if:article_filter.iaf_is_virtual:=:1}
-                    {if:st_pr_sizeselect:=:1}
-                        <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
-                            <option value="">Geen</option>
-                            {foreach:array_virtual:virtual}
-                            <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
-                            {foreach_end}
-                        </select>
-                    {if_end}
-
-                    {if:st_pr_sizeselect:=:0}
-                        <div class="size_select_buttons ">
-                            {foreach:array_virtual:virtual}
-                                <button  class="{virtual.af_selected}" value="{virtual.af_linked_hoofdlijst_id}" data-type="virtual" onclick="swShop.sizeSelected(this);return false;">{virtual.af_value3}</button>
-                            {foreach_end}
-
-                            {remark:We work with a hidden selector that gets set by the buttons}
-                            <select onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                    <div class="col-12 mt-3 mb-3">
+                        {if:st_pr_sizeselect:=:1}
+                            <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
                                 <option value="">Geen</option>
                                 {foreach:array_virtual:virtual}
-                                <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
+                                <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
                                 {foreach_end}
                             </select>
-                        </div>
-                    {if_end}
+                        {if_end}
+
+                        {if:st_pr_sizeselect:=:0}
+                            <div class="size_select_buttons ">
+                                {foreach:array_virtual:virtual}
+                                    <button  class="{virtual.af_selected}" value="{virtual.af_linked_hoofdlijst_id}" data-type="virtual" onclick="swShop.sizeSelected(this);return false;">{virtual.af_value3}</button>
+                                {foreach_end}
+
+                                {remark:We work with a hidden selector that gets set by the buttons}
+                                <select onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                                    <option value="">Geen</option>
+                                    {foreach:array_virtual:virtual}
+                                    <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
+                                    {foreach_end}
+                                </select>
+                            </div>
+                        {if_end}
+                    </div>
                 {if_end}
-                        
+
+                {remark:sizeruler or non-sizeruler display}
                 <div class="col-12 mt-3 mb-3">
                     {define_c:st_pr_sizeselect:1}
 
