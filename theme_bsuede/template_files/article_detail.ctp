@@ -3,14 +3,13 @@
 
 
 {block_declare:cart_button:clear}
-    {if:article_filter.iaf_is_virtual:<>:1}
-        {if:st_pr_show_amt:=:true}    
+    {if:show_add_to_cart:<>:}
+        {if:st_pr_show_amt:=:true}
             <div class="col-12  {uitoggle_addtocart}  ">
                 <div class="input-group ">
                     <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
                     <div class="input-group-append ">
-                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
-
+                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen</button>
                     </div>
                 </div>
             </div>
@@ -18,10 +17,11 @@
 
         {if:st_pr_show_amt:<>:true}
             <div class="col-12 {uitoggle_addtocart}">
-                <button class="btn btn-addtocart  sw-add-to-cart-button tmplt_sales_color" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen <i class="fas fa-shopping-cart"></i></button>
+                <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen</button>
             </div>
         {if_end}
     {if_end}
+
 {block_end}
 
 
@@ -60,13 +60,42 @@
                     <h1 id="article_baseprice" class="tmplt_attention_color d-inline detail-pricing"> {sap_price:format:currency}</h1>
                 </div>
             </div>
+
+             {if:article_filter.iaf_is_virtual:=:1}
+                {if:st_pr_sizeselect:=:1}
+                    <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
+                        <option value="">Geen</option>
+                        {foreach:array_virtual:virtual}
+                        <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
+                        {foreach_end}
+                    </select>
+                {if_end}
+
+                {if:st_pr_sizeselect:=:0}
+                    <div class="size_select_buttons ">
+                        {foreach:array_virtual:virtual}
+                            <button  class="{virtual.af_selected}" value="{virtual.af_linked_hoofdlijst_id}" data-type="virtual" onclick="swShop.sizeSelected(this);return false;">{virtual.af_value3}</button>
+                        {foreach_end}
+
+                        {remark:We work with a hidden selector that gets set by the buttons}
+                        <select onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                            <option value="">Geen</option>
+                            {foreach:array_virtual:virtual}
+                            <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
+                            {foreach_end}
+                        </select>
+                    </div>
+                {if_end}
+
+            {if_end}
+
+
             <div class="col-12 mt-3 mb-5">
                 {define_c:st_pr_sizeselect:1}
 
                 {if:st_pr_sizeselect:=:1}
                     <div class="{hide_sizeruler_selection}">Kies uw maat</div>
-                    <select data-article-id="{swi_hl_id}" class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
-
+                    <select data-article-id="{selected_article_id}" class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
                 {if_end}
 
                 {if:st_pr_sizeselect:=:0}
@@ -75,7 +104,7 @@
                     </div>
                     {define:st_pr_sizeselect:1}
                     {remark:We work with a hidden selector that gets set by the buttons}
-                    <select data-article-id="{swi_hl_id}" class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
+                    <select data-article-id="{selected_article_id}" class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
                     {define:st_pr_sizeselect:0}
 
                 {if_end}
@@ -86,7 +115,7 @@
                     {tierprices}
                 </div>
             </div>
-            
+
                 {block:cart_button}
             {block_end}
 
