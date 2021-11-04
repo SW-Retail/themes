@@ -62,6 +62,7 @@
             </div>
 
              {if:article_filter.iaf_is_virtual:=:1}
+                <div class="col-12 mt-3">
                 {if:st_pr_sizeselect:=:1}
                     <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
                         <option value="">Geen</option>
@@ -86,6 +87,7 @@
                         </select>
                     </div>
                 {if_end}
+                </div>
 
             {if_end}
 
