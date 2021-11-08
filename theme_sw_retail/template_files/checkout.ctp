@@ -19,7 +19,7 @@
                 <h3>Totaal:</h3>
             </div>
             <div class="col-6 checkout_total_line text-left">
-                <h3>{invoice_total_ex_shipping_costs:format:currency}</h3>
+              <h3>{invoice_total_ex_shipping_costs:format:currency}</h3>
             </div>
             {block_end}
         </div>
@@ -145,6 +145,8 @@
                     {input:adres_telefoon1}
                 </div>
 
+
+
                 <div class="{uitoggle_account_create}" id="account_create" >
                     Account aanmaken
                     {checkbox:account_create}
@@ -155,9 +157,11 @@
                     {checkbox:alternate_address}
                 </div>
 
+                <div class="hide">
+                    {input:service_point_id:id=service_point_id}
+                </div>
 
                 {form_end}
-
 
             </div>
         </div>
@@ -221,6 +225,7 @@
                         <div class='webshop_select_option webshop_select_send_option' sendid='{sendid}' sendprice='{sendprice}' is_selected='{is_selected}' onclick='swSendMethods.selectSendMethod(this);return false;' type='sw_selection' >
                             {name} {price}
                         </div>
+                        <div class="send_methods_pickuplocations" id="send_methods_pickuplocations_{sendid}"></div>
                         {block_end}
                     {sendmethods:send_method_line}
 
