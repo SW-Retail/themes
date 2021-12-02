@@ -2,7 +2,7 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 {remark: renders articles in a small list}
 
-{if:slider:=:1}
+{if:slider:=:0}
     <div class="col-6 col-md-3 article_item_small"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         {block:article_list_small_top:optional}
         <a title="{artoms}" href="{article_link}" class="article_item_link">
