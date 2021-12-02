@@ -42,38 +42,38 @@
 
 
 {if:slider:=:1}
-<li class="splide__slide">
-    <div class=""  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
-        <div class="article_item_small_overlay">
-            <a title="{artoms}" href="{article_link}" class="article_item_link">
-                <div class="article_content">
-                    {if:overlay_text:<>:}
-                    <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
-                    {if_end}
-                    <div class="article_header">
-                        <b>{artoms}</b>
-                    </div>
-
-                    <div class="article_image_list_mini_container">
-                        <div class="article_image_list">
-                            {if:has_image:=:false}
-                                <img src="{article_image:0}" alt="{article_image_alt:0}"/>
-                            {if_end}
-                            {if:has_image:=:true}
-                                <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
-                            {if_end}
+    <li class="splide__slide">
+        <div class=""  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
+            <div class="article_item_small_overlay">
+                <a title="{artoms}" href="{article_link}" class="article_item_link">
+                    <div class="article_content">
+                        {if:overlay_text:<>:}
+                        <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
+                        {if_end}
+                        <div class="article_header">
+                            <b>{artoms}</b>
                         </div>
+
+                        <div class="article_image_list_mini_container">
+                            <div class="article_image_list">
+                                {if:has_image:=:false}
+                                    <img src="{article_image:0}" alt="{article_image_alt:0}"/>
+                                {if_end}
+                                {if:has_image:=:true}
+                                    <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
+                                {if_end}
+                            </div>
+                        </div>
+
+
+
+
+
+                        <h3 class="tmplt_attention_color pull-right">{sap_price:format:currency}</h3>
                     </div>
-
-
-
-
-
-                    <h3 class="tmplt_attention_color pull-right">{sap_price:format:currency}</h3>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-</li>
+    </li>
 {if_end}
 
