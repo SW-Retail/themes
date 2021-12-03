@@ -50,26 +50,36 @@
                         {if:overlay_text:<>:}
                         <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
                         {if_end}
-                        <div class="article_header">
-                            <b>{artoms}</b>
-                        </div>
 
                         <div class="article_image_list_mini_container">
-                            <div class="article_image_list">
-                                {if:has_image:=:false}
-                                    <img src="{article_image:0}" alt="{article_image_alt:0}"/>
-                                {if_end}
-                                {if:has_image:=:true}
-                                    <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
-                                {if_end}
+                            <div class="article_image_list ">
+                                <div class="row h-100">
+                                    <div class="col-12 my-auto">
+                                        {if:has_image:=:false}
+                                            <img src="{article_image:0}" alt="{article_image_alt:0}"/>
+                                        {if_end}
+                                        {if:has_image:=:true}
+                                            <img src="image/small/{article_image:0}" alt="{article_image_alt:0}" style="max-width:100%"/>
+                                        {if_end}
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        <div class="article_header pt-3">
+                            <b>{*article_name}</b>
+                            <p>{artfabr}</p>
+                        </div>
 
+                        <div class="{uitoggle_pricing_normal}" >
+                            <h3 id="article_baseprice" class="tmplt_attention_color pull-right"> {sap_price:format:currency}</h3>
+                        </div>
+                        <div class="{uitoggle_pricing_discount} hold_the_line">
 
+                            <div id="article_original_price" class="tmplt_attention_color" style="text-decoration: line-through;"> {sap_original_price:format:currency} </div>
+                            <h3 id="article_baseprice" class="tmplt_attention_color pull-right"> {sap_price:format:currency}</h3>
+                        </div>
 
-
-                        <h3 class="tmplt_attention_color pull-right">{sap_price:format:currency}</h3>
                     </div>
                 </a>
             </div>
