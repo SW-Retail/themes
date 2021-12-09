@@ -2,6 +2,8 @@
 {template_version:__TEMPLATEVERSION_HERE__}
 {remark: renders articles in a small list}
 
+{define_c:slider:0}
+
 {if:slider:=:0}
     <div class="col-6 col-md-3 article_item_small"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         {block:article_list_small_top:optional}
