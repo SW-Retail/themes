@@ -1,3 +1,5 @@
+
+
 {templater_start}
 {template_version:swretail_r5_9_66}
 
@@ -72,6 +74,7 @@
                 <div class="{uitoggle_pricing_discount}">
                     <h3 id="article_original_price" class="tmplt_attention_color" style="text-decoration: line-through"> {sap_original_price:format:currency}</h3>
                     <p>{sap_description}  Nu Voor</p>
+
                     <h1 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h1>
                 </div>
             </div>
@@ -118,25 +121,25 @@
                 {define_c:st_pr_sizeselect:1}
 
                 {if:st_pr_sizeselect:=:1}
-                <div class="{hide_sizeruler_selection}">Kies uw maat</div>
-                <select class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
-                <div class="col-12 pt-3 px-0 {uitoggle_addtocart}  sw-add-to-cart-button">
+                    <div class="{hide_sizeruler_selection}">Kies uw maat</div>
+                    <select class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
 
-                    <button class="tmplt_sales_color" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen</button>
-                </div>
+                    <div class="row">
+                       {block:cart_button}
+                    </div>
                 {if_end}
 
 
                 {if:st_pr_sizeselect:=:0}
 
-                <div class="size_select_buttons {hide_sizeruler_selection}"  >
-                    {size_select}
-                </div>
-                {define:st_pr_sizeselect:1}
-                {remark:We work with a hidden selector that gets set by the buttons}
-                <select class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
-                {define:st_pr_sizeselect:0}
-                {block:cart_button}
+                    <div class="size_select_buttons {hide_sizeruler_selection}"  >
+                        {size_select}
+                    </div>
+                    {define:st_pr_sizeselect:1}
+                    {remark:We work with a hidden selector that gets set by the buttons}
+                    <select class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
+                    {define:st_pr_sizeselect:0}
+                    {block:cart_button}
                 {if_end}
             </div>
 
