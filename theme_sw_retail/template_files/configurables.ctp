@@ -18,3 +18,5 @@
 
 {template_def:Aantal weergave:Aantal artikelen weergeven onderaan het zoekresultaat:text:::\{amt_articles\} artikelen uit \{amt_articles_total\}:article_amounts:article_overview}
 
+{trans:nl:paging_block_Volgende:Volgende}
+{trans:nl:paging_block_Vorige:Vorige}
