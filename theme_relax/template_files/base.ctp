@@ -35,7 +35,7 @@
     <!-- some icons -->
     <link rel="preload" as="style" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- this stylesheet handles the configuration from the application -->
-    <link rel="preload" as="style"   type="text/css" href="/webshop_stylesheet?v={version}" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" as="style"   type="text/css" href="/webshop_stylesheet/1?v={static_version}" onload="this.onload=null;this.rel='stylesheet'"/>    
     <!-- nice menu --> 
     <link rel="preload" as="style"   type="text/css" href="{sw_cdn_url}/css/fancy-menu.css?v={version}" onload="this.onload=null;this.rel='stylesheet'"/>
     <link rel="preload" as="style" href="{sw_cdn_url}/plugins/splide/splide.min.css" onload="this.onload=null;this.rel='stylesheet'">
