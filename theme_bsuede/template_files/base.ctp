@@ -28,7 +28,7 @@
     
     <title>{meta_title}</title>
 
-    <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
+    <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}" async></script>
 
     
     <!-- bootstrap -->
@@ -65,13 +65,13 @@
 
 
     <!-- The webshop app -->
-    <script src="/javascript.js?v={version}"></script>
+    <script src="/javascript.js?v={version}" async></script>
 
 
     <link rel="icon" href="/{favicon}">
 
     <!-- splider is there for sliders -->
-    <script src="{sw_cdn_url}/plugins/splide/splide.min.js"></script>
+    <script src="{sw_cdn_url}/plugins/splide/splide.min.js" async></script>
 
 
     <!-- SW-Retail theme bsuede -->
