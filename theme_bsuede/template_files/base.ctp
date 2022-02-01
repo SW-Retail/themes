@@ -28,19 +28,39 @@
 
     <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
 
+    
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
-
-    <link rel="stylesheet" type="text/css" href="{static_content}/css/stylesheet.css?v={version}"/>
-
+    <link   rel="preload" as="style"  type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
+    <!-- master stylesheet -->
+    <link rel="preload" as="style"  type="text/css" href="{static_content}/css/stylesheet.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- some icons -->
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}"/>
-
+    <link rel="preload" as="style" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- this stylesheet handles the configuration from the application -->
-    <link rel="stylesheet"  type="text/css" href="/webshop_stylesheet?v={version}"/>
+    <link rel="preload" as="style"   type="text/css" href="/webshop_stylesheet?v={version}" onload="this.onload=null;this.rel='stylesheet'"/>
+    <!-- nice menu --> 
+    <link rel="preload" as="style"   type="text/css" href="{sw_cdn_url}/css/fancy-menu.css?v={version}" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" as="style" href="{sw_cdn_url}/plugins/splide/splide.min.css" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <!-- grid stylesheet with fonts -->
+        <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
+        <!-- master stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{static_content}/css/stylesheet.css?v={version}"/>
+        <!-- some icons -->
+        <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}"/>
+        <!-- this stylesheet handles the configuration from the application -->
+        <link rel="stylesheet"  type="text/css" href="/webshop_stylesheet?v={version}"/>
+        <!-- nice menu --> 
+        <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/css/fancy-menu.css?v={version}"/>
+        <!-- splider -->
+        <link rel="stylesheet" href="{sw_cdn_url}/plugins/splide/splide.min.css">
+        
+    </noscript>
+
+
 
     <script src="{sw_cdn_url}/plugins/bootstrap/js/bootstrap.bundle.min.js?v={version}"></script>
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/css/fancy-menu.css?v={version}"/>
+
 
     <!-- The webshop app -->
     <script src="/javascript.js?v={version}"></script>
@@ -50,7 +70,7 @@
 
     <!-- splider is there for sliders -->
     <script src="{sw_cdn_url}/plugins/splide/splide.min.js"></script>
-    <link rel="stylesheet" href="{sw_cdn_url}/plugins/splide/splide.min.css">
+
 
     <!-- SW-Retail theme bsuede -->
 
