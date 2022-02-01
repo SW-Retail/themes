@@ -13,10 +13,10 @@
         .sw-modal {
             visibility: hidden;
         }
-
     </style>
+
 {templater_start}
-{template_version:swretail_r5_9_34}
+{template_version:swretail_r5_9_61}
     {template_name:swretail_base_theme}
     <meta name="description" content="{meta_description}"/>
     <meta name="keywords"    content="{meta_keywords}" />
@@ -27,18 +27,29 @@
 
     <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
 
-    <!-- grid stylesheet with fonts -->
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
+
+    <!-- bootstrap -->
+    <link   rel="preload" as="style"  type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- master stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{static_content}/css/stylesheet.css?v={version}"/>
-
-    <script src="{static_content}/js/script.js"></script>
-
+    <link rel="preload" as="style"  type="text/css" href="{static_content}/css/stylesheet.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- some icons -->
-    <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}"/>
-
+    <link rel="preload" as="style" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- this stylesheet handles the configuration from the application -->
-    <link rel="stylesheet"  type="text/css" href="/webshop_stylesheet?v={version}"/>
+    <link rel="preload" as="style"   type="text/css" href="/webshop_stylesheet?v={version}" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <noscript>
+        <!-- grid stylesheet with fonts -->
+        <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}"/>
+        <!-- master stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{static_content}/css/stylesheet.css?v={version}"/>
+        <!-- some icons -->
+        <link rel="stylesheet" type="text/css" href="{sw_cdn_url}/plugins/fontawesome/css/font_awesome_all.min.css?v={version}"/>
+        <!-- this stylesheet handles the configuration from the application -->
+        <link rel="stylesheet"  type="text/css" href="/webshop_stylesheet?v={version}"/>
+        <!-- splider -->
+        <link rel="stylesheet" href="{sw_cdn_url}/plugins/splide/splide.min.css">
+    </noscript>
 
     <!-- The webshop app -->
     <script src="/javascript.js?v={version}"></script>
@@ -48,7 +59,7 @@
 
     <!-- splider is there for sliders -->
     <script src="{sw_cdn_url}/plugins/splide/splide.min.js"></script>
-    <link rel="stylesheet" href="{sw_cdn_url}/plugins/splide/splide.min.css">
+    <link rel="preload" as="style" href="{sw_cdn_url}/plugins/splide/splide.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
     <!-- theme base -->
     {swretail_plugin_place_head}
@@ -56,6 +67,7 @@
 </head>
 
 <body>
+
     {swretail_plugin_place_top}
 
     <!--  some cart buttons -->
@@ -125,6 +137,7 @@
     {block:hook:hook_below_footer:page_block}
 
     {swretail_plugin_place_bottom}
+
 </body>
 
 
@@ -139,6 +152,8 @@
 
 
 </script>
+
+
 
 {templater_stop}
 
