@@ -5,6 +5,16 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .sw-modal {
+            visibility: hidden;
+        }
+
+    </style>
 {templater_start}
 {template_version:swretail_r5_9_34}
     {template_name:swretail_base_theme}
