@@ -26,7 +26,7 @@
     <title>{meta_title}</title>
 
 
-    <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}" async></script>
+    <script src="{sw_cdn_url}/js/jquery-3.5.1.min.js?v={version}"></script>
 
 
     <!-- bootstrap -->
