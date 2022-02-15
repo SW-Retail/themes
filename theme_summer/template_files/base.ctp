@@ -64,7 +64,7 @@
     <link rel="icon" href="/{favicon}">
 
     <!-- splide is there for sliders -->
-    <script src="{sw_cdn_url}/plugins/splide/splide.min.js" async></script>
+    <script src="{sw_cdn_url}/plugins/splide/splide.min.js"></script>
 
 
     <!-- SW-Retail theme summer -->
