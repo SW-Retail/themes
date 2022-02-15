@@ -60,12 +60,12 @@
     <script src="{sw_cdn_url}/plugins/bootstrap/js/bootstrap.bundle.min.js?v={version}" async></script>
 
     <!-- The webshop app -->
-    <script src="/javascript.js?v={version}" async></script>
+    <script src="/javascript.js?v={version}" ></script>
 
     <link rel="icon" href="/{favicon}">
 
     <!-- splider is there for sliders -->
-    <script src="{sw_cdn_url}/plugins/splide/splide.min.js" async></script>
+    <script src="{sw_cdn_url}/plugins/splide/splide.min.js" ></script>
     
 
     <!-- SW_Retail theme relax -->
