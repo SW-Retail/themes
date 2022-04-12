@@ -90,7 +90,7 @@
             {if:article_filter.iaf_is_virtual:=:1}
                 <div class="col-12">
                     {if:st_pr_sizeselect:=:1}
-                        <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
+                        <select data-article-id="{selected_article_id}"   onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
                             <option value="">Geen</option>
                             {foreach:array_virtual:virtual}
                             <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
@@ -105,7 +105,7 @@
                             {foreach_end}
 
                             {remark:We work with a hidden selector that gets set by the buttons}
-                            <select onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                            <select data-article-id="{selected_article_id}"  onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
                                 <option value="">Geen</option>
                                 {foreach:array_virtual:virtual}
                                 <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
