@@ -1,7 +1,7 @@
-
-
 {templater_start}
 {template_version:swretail_r5_9_66}
+
+
 
 {block_declare:cart_button:clear}
     {if:show_add_to_cart:<>:}
@@ -10,7 +10,7 @@
                 <div class="input-group ">
                     <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
                     <div class="input-group-append ">
-                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;"  >Aan winkelwagen toevoegen</button>
+                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;" >{_Aan winkelwagen toevoegen}</button>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
 
         {if:st_pr_show_amt:<>:true}
             <div class="col-12 {uitoggle_addtocart}">
-                <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">Aan winkelwagen toevoegen</button>
+                <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
             </div>
         {if_end}
     {if_end}
@@ -29,7 +29,7 @@
 {breadcrumb}
 
 <div class="row">
-    <div class="col-12"><button onclick="swShop.gotoPreviousURL();return false;"><i class="fas fa-arrow-left"></i>Terug</button></div>
+    <div class="col-12"><button onclick="swShop.gotoPreviousURL();return false;"><i class="fas fa-arrow-left"></i>{_Terug}</button></div>
 </div>
 <div class="row"">
 
@@ -81,7 +81,7 @@
 
             <div class="col-12">
                 <div class="{uitoggle_tierprices}">
-                    <p><b>Koop meer en bespaar !</b> </p>
+                    <p><b>{_Koop meer en bespaar !}</b> </p>
                     {tierprices}
                 </div>
             </div>
@@ -90,7 +90,7 @@
             {if:article_filter.iaf_is_virtual:=:1}
                 <div class="col-12">
                     {if:st_pr_sizeselect:=:1}
-                        <select data-article-id="{selected_article_id}"   onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
+                        <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
                             <option value="">Geen</option>
                             {foreach:array_virtual:virtual}
                             <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
@@ -105,7 +105,7 @@
                             {foreach_end}
 
                             {remark:We work with a hidden selector that gets set by the buttons}
-                            <select data-article-id="{selected_article_id}"  onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                            <select   onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
                                 <option value="">Geen</option>
                                 {foreach:array_virtual:virtual}
                                 <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
@@ -121,8 +121,8 @@
                 {define_c:st_pr_sizeselect:1}
 
                 {if:st_pr_sizeselect:=:1}
-                    <div class="{hide_sizeruler_selection}">Kies uw maat</div>
-                    <select class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
+                    <div class="{hide_sizeruler_selection}">{_Kies uw maat}</div>
+                    <select data-article-id="{selected_article_id}"   class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
 
                     <div class="row">
                        {block:cart_button}
@@ -137,7 +137,7 @@
                     </div>
                     {define:st_pr_sizeselect:1}
                     {remark:We work with a hidden selector that gets set by the buttons}
-                    <select class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
+                    <select data-article-id="{selected_article_id}"   class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
                     {define:st_pr_sizeselect:0}
                     {block:cart_button}
                 {if_end}
@@ -174,7 +174,7 @@
 
 <!-- uitoggle_upsell_available will evaluate to hide when there are no upsells -->
 <div class="article-list-small upsell {uitoggle_upsell_available} ">
-    <h3>Alternatieve producten</h3>
+    <h3>{_Alternatieve producten}</h3>
     <div class="row">
         {upsell}
     </div>
@@ -182,7 +182,7 @@
 
 <!-- uitoggle_crosssell_available will evaluate to hide when there are no upsells -->
 <div class="article-list-small  crosssell {uitoggle_crosssell_available} ">
-    <h3>Bijbehorende producten</h3>
+    <h3>{_Bijbehorende producten}</h3>
     <div class="row">
         {crosssell}
     </div>
@@ -198,3 +198,4 @@
         swShopHelper.setupZoom();
     });
 </script>
+
