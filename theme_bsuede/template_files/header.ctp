@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-4 col-md-6">
                 <!--{block:menu:menutop:class_menu-horizontal}-->
-                <a href="/"><img height="80px" src="/{shoplogo}" title="{shopname}" /></a>
+                <a href="/" id="shoplogo"><img height="80px" src="/{shoplogo}" title="{shopname}" /></a>
             </div>
             <div class="col-8 col-md-6 col-lg-5">
                 <div id="sw_customer_login_button" class="row sub-header h-100 visible-large">
