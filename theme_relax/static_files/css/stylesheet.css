@@ -1147,3 +1147,11 @@ fieldset[disabled] .btn-addtocart.active {
 .main-menu .fas {
     line-height:1.5;
 }
+
+
+#shoplogo {
+	max-width:300px;
+	height:40px;
+}
+	
+	
