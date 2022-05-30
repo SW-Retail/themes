@@ -39,7 +39,7 @@
 
 <div class="{uitoggle_checkout_form} row" id="checkout_one_page">
     <div class="col-12 row">
-        <div class="col-md-4 ">
+        <div class="col-md-4 {uitoggle_discountcodes_redeem}">
             <div class="row">
                 <div class="col-12" >
                     <h3>Kortingscode</h3>
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 ">
+        <div class="col-md-4 {uitoggle_giftcards_redeem}">
             <div class="row">
                 <div class="col-12" >
                     <h3>Cadeaubon</h3>
