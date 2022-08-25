@@ -138,6 +138,11 @@
                     Ander Afleveradres
                     {checkbox:alternate_address}
                 </div>
+                
+                <div class="col-12 {uitoggle_newsletter_subscribe}" id="checkout_newsletter_subscribe" >
+                    {checkout_newsletter_subscribe_text}
+                    {checkbox:rl_newsletter}
+                </div>
 
                 <div class="hide">
                     {input:service_point_id:id=service_point_id}
