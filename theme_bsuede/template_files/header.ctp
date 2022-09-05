@@ -27,6 +27,16 @@
                         {block:menu:customer-menu:class=menu_customer}
                     </div>
                     <div class="col-1 my-auto">
+                        <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
+                            {block_declare:wishlist_button}
+                            <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="cursor-pointer">
+                                <i class="fas fa-heart tmplt_attention_color" ></i>
+                                <span class="wishlist-cart-number badge-warning tmplt_sales_color" id="sw_wishlist_count">{amount_in_wishlist}</span>
+                            </a>
+                            {block_end}
+                        </div>
+                    </div>
+                    <div class="col-1 my-auto">
                         <div id="checkout_button">
                             {block_declare:checkout_button}
                             <a onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart" >
