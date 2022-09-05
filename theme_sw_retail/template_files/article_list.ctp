@@ -33,6 +33,7 @@
                     {if:maatbalk:=:}
                     <div style="float:left">
                         <button onclick="swShop.addToCartExecute({article_id},1);event.stopPropagation();return false;"><i class="fas fa-cart-plus"></i></button>
+                        <button class="{uitoggle_addtowishlist}" onclick="swShop.addToWishlistExecute({article_id},1,1);event.stopPropagation();return false;"> <i class="{uitoggle_addtowishlist_button_class}"></i> </button>
                     </div>
                     {if_end}
                 {if_end}
