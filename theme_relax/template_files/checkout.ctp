@@ -10,6 +10,60 @@
     </div>
 </div>
 
+<div class="row pt-3">
+    <div id="wishlist_cart" class="col-12 col-lg-6 {uitoggle_checkout_wishlist}">
+        {block_declare:wishlist_cart}
+        <h2>{_Verlanglijst}</h2>
+
+
+        {foreach:wishlist_articles:wishlist_article}
+        {define:wishlist_cart_article:{@load:article:{wishlist_article.hoofdlijst_id}}}
+        {block:wishlist_article_line}
+        {foreach_end}
+
+
+    </div>
+</div>
+
+{block_declare:wishlist_article_line:clear}
+
+
+<div class="row {uitoggle_checkout_wishlist}">
+
+    <div class="col-4 checkout_article_img sw_pointer" onclick="swShop.articleLoad(this);" data-link="/{wishlist_cart_article:article_link}">
+                <img src="/image/small/{wishlist_cart_article:array_images:value:0:af_value2}">
+    </div>
+    <div class="col-8">
+        <div class="row " >
+            <div class="col-6 sw_pointer" onclick="swShop.articleLoad(this);" data-link="/{wishlist_cart_article:article_link}"  ><b>{wishlist_cart_article:artoms}</b></div>
+            <div class="col-6">
+
+                <button title="Voeg het artikel toe aan uw winkelwagen" onclick="swShop.wishlistAddToShoppingCart({wishlist_article.id});return false;" >
+                    <i class="fa fas fa-shopping-cart"></i>
+                </button>
+
+                <button title="Verwijder artikel van verlanglijst" order-det-id="{wishlist_article.id}" onclick="swShop.wishlistDeleteLine({wishlist_article.id});return false;" >
+                    <i class="fa fas fa-trash"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        {define:wishcartprice:{wishlist_cart_article:sap_price}}
+
+        <div class="col-6">
+            <div class="pull-right">
+                <b>{wishcartprice:format:currency}</b>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{block_end}
+
 <div class="row">
     <div class="col-6 {uitoggle_checkout_options}" id ="customer_checkout_options">
         <div id="checkout_options_total_line" class="row">
