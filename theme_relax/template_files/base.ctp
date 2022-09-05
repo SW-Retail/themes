@@ -83,6 +83,12 @@
         <button onclick="swShopHelper.modalHide();"   >Verder winkelen</button>
         <button onclick="swShopHelper.loadCheckout();"><i class="fas fa-shopping-cart"></i> Winkelwagen</button>
     </div>
+    
+    <!--  some cart buttons -->
+    <div id="wishlist_putin_confirmation" class="hide">
+        <button onclick="swShopHelper.modalHide();"   >Verder winkelen</button>
+        <button onclick="swShopHelper.loadWishlist();"><i class="fas fa-heart"></i> Verlanglijst</button>
+    </div>
 
     <!-- modal dialog  -->
     <div id="modal_ok" class="hide">
