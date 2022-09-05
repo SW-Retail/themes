@@ -32,6 +32,14 @@
                             <a class='sw_customer-options_button position-relative visible-large' id="sw_customer_options" class="cursor-pointer"> <i class="fas fa-user-alt tmplt_attention_color "></i></a>
                             {block:menu:customer-menu:class=menu_customer}
                         </div>
+                        <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
+                            {block_declare:wishlist_button}
+                            <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="cursor-pointer">
+                                <i class="fas fa-heart tmplt_attention_color" ></i>
+                                <span class="wishlist-cart-number badge-warning tmplt_sales_color" id="sw_wishlist_count">{amount_in_wishlist}</span>
+                            </a>
+                            {block_end}
+                        </div>
                         <div id="checkout_button" class="position-relative pl-3  visible-large">
                             {block_declare:checkout_button}
                                 <a onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart" class="cursor-pointer"><i class="fas fa-shopping-cart tmplt_attention_color" ></i><span class="shopping-cart-number badge-warning tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span></a>
