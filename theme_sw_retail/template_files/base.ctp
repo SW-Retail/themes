@@ -75,6 +75,12 @@
         <button onclick="swShopHelper.modalHide();"   >Verder winkelen</button>
         <button onclick="swShopHelper.loadCheckout();"><i class="fas fa-shopping-cart"></i> Winkelwagen</button>
     </div>
+    
+    <!--  some cart buttons -->
+<div id="wishlist_putin_confirmation" class="hide">
+    <button onclick="swShopHelper.modalHide();"   >Verder winkelen</button>
+    <button onclick="swShopHelper.loadWishlist();"><i class="fas fa-heart"></i> Verlanglijst</button>
+</div>
 
     <!-- modal dialog  -->
     <div id="modal_ok" class="hide">
@@ -83,7 +89,7 @@
 
     <!-- UI blocking div can be accessed using swShopHelper.blockUI  -->
     <div class="blocked" id="block-ui"> <i class="fas fa-spinner fa-pulse" style="font-size:100px; position:relative;top: calc(50% - 100px);left: 50%;"></i> </div>
-
+    
     <!-- Modal div, can be handled using swShopHelper.modalShow, better not to delete this-->
     <div class="sw-modal " id="sw-modal-dialog">
         <div class="sw-modal-content">
