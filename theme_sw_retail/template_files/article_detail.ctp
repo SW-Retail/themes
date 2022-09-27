@@ -18,7 +18,7 @@
 
         {if:st_pr_show_amt:<>:true}
             <div class="col-12 {uitoggle_addtocart}">
-                <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
+                <button class="btn btn-addtocart tmplt_sales_color sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
             </div>
         {if_end}
     {if_end}
