@@ -216,6 +216,10 @@
                 </div>
                 
                 <div class="{uitoggle_newsletter_subscribe}" id="checkout_newsletter_subscribe" >
+                    {if:checkout_newsletter_subscribe_text:=:}
+                        {_Inschrijven voor nieuwsbrief}
+                    {if_end}
+
                     {checkout_newsletter_subscribe_text}
                     {checkbox:rl_newsletter}
                 </div>
