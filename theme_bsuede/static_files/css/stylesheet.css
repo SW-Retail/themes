@@ -464,6 +464,10 @@ ul.menu-horizontal, ul.menu-horizontal li {
     font-size: 1rem!important;
 }
 
+.article_content b{
+    color: #000;
+}
+
 #article_original_price{
     color: #3e88c8;
 }
