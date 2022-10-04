@@ -978,6 +978,10 @@ ul.has-cms-content p {
   overflow: hidden;
 }
 
+.article_header b{
+    color: #000;
+}
+
 .article_item:hover {
   -webkit-box-shadow: 0px 0px 3px 3px rgba(50, 50, 50, 0.1);
           box-shadow: 0px 0px 3px 3px rgba(50, 50, 50, 0.1);
