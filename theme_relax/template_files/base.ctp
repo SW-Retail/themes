@@ -22,7 +22,7 @@
     <meta name="keywords"    content="{meta_keywords}" />
     <meta name="title"       content="{meta_title}" />
     <meta name="robots"      content="{meta_seo_tags}">
-    
+    {block:canonical_url_block}
     <title>{meta_title}</title>
 
 
