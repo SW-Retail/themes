@@ -105,7 +105,7 @@
 
 
 <div class="{uitoggle_checkout_form} col-12 row" id="checkout_one_page">
-    <div class="row">
+    <div class="row col-12">
         <div class="col-md-4">
             <div class="row">
                 <div class="col-12" >
