@@ -56,7 +56,7 @@
                     <div class="col-12 mt-3 mb-3">
                         {if:st_pr_sizeselect:=:1}
                             <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
-                                <option value="">Geen</option>
+                                <option value="{swi_hl_id}">Geen</option>
                                 {foreach:array_virtual:virtual}
                                 <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
                                 {foreach_end}
@@ -71,7 +71,7 @@
 
                                 {remark:We work with a hidden selector that gets set by the buttons}
                                 <select onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
-                                    <option value="">Geen</option>
+                                    <option value="{swi_hl_id}">Geen</option>
                                     {foreach:array_virtual:virtual}
                                     <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
                                     {foreach_end}
