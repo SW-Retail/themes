@@ -1,32 +1,33 @@
 {templater_start}
 {template_version:swretail_r5_9_66}
 
-
-
 {block_declare:cart_button:clear}
-    {if:show_add_to_cart:<>:}
-        {if:st_pr_show_amt:=:true}
-            <div class="col-12  {uitoggle_addtocart}  ">
-                <div class="input-group ">
-                    <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
-                    <div class="input-group-append ">
-                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;" >{_Aan winkelwagen toevoegen}</button>
-                    </div>
-                </div>
-            </div>
-        {if_end}
-
-        {if:st_pr_show_amt:<>:true}
-            <div class="col-12 {uitoggle_addtocart}">
-                <button class="btn btn-addtocart tmplt_sales_color sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
-            </div>
-        {if_end}
-    {if_end}
-    <div class="col-12 {uitoggle_addtowishlist}">
-        <button class="btn btn-addtocart  sw-add-to-cart-button " onclick="swShop.addToWishlist(this);return false;"> <i class="{uitoggle_addtowishlist_button_class}"></i> </button>
-
+{if:show_add_to_cart:<>:}
+{if:st_pr_show_amt:=:true}
+<div class="col-12  {uitoggle_addtocart}  ">
+    <div class="input-group ">
+        <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
+        <div class="input-group-append ">
+            <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;" >{_Aan winkelwagen toevoegen}</button>
+        </div>
     </div>
+</div>
+{if_end}
+
+{if:st_pr_show_amt:<>:true}
+<div class="col-12 {uitoggle_addtocart}">
+    <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
+</div>
+{if_end}
+{if_end}
+
+<div class="col-12 {uitoggle_addtowishlist}">
+    <button class="btn  sw-add-to-cart-button " onclick="swShop.addToWishlist(this);return false;"> <i class="{uitoggle_addtowishlist_button_class}"></i> </button>
+
+</div>
 {block_end}
+
+
 
 {block_declare:article_default}
 
@@ -91,33 +92,35 @@
             </div>
 
 
+
             {if:article_filter.iaf_is_virtual:=:1}
-                <div class="col-12">
-                    {if:st_pr_sizeselect:=:1}
-                        <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
-                            <option value="{swi_hl_id}">Geen</option>
-                            {foreach:array_virtual:virtual}
-                            <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
-                            {foreach_end}
-                        </select>
-                    {if_end}
 
-                    {if:st_pr_sizeselect:=:0}
-                        <div class="size_select_buttons ">
-                            {foreach:array_virtual:virtual}
-                                <button  class="{virtual.af_selected}" value="{virtual.af_linked_hoofdlijst_id}" data-type="virtual" onclick="swShop.sizeSelected(this);return false;">{virtual.af_value3}</button>
-                            {foreach_end}
+            <div class="col-12">
+                {if:st_pr_sizeselect:=:1}
+                <select onchange="swShop.loadArticlePrices($(this).val());" id="sw_virtual_selected">
+                    <option value="{swi_hl_id}">Geen</option>
+                    {foreach:array_virtual:virtual}
+                    <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_value3}</option>
+                    {foreach_end}
+                </select>
+                {if_end}
 
-                            {remark:We work with a hidden selector that gets set by the buttons}
-                            <select   onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
-                                <option value="{swi_hl_id}">Geen</option>
-                                {foreach:array_virtual:virtual}
-                                <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
-                                {foreach_end}
-                            </select>
-                        </div>
-                    {if_end}
+                {if:st_pr_sizeselect:=:0}
+                <div class="size_select_buttons ">
+                    {foreach:array_virtual:virtual}
+                    <button  class="{virtual.af_selected}" value="{virtual.af_linked_hoofdlijst_id}" data-type="virtual" onclick="swShop.sizeSelected(this);return false;">{virtual.af_value3}</button>
+                    {foreach_end}
+
+                    {remark:We work with a hidden selector that gets set by the buttons}
+                    <select   onchange="swShop.loadArticlePrices($(this).val());" class="hide" id="sw_virtual_selected">
+                        <option value="{swi_hl_id}">Geen</option>
+                        {foreach:array_virtual:virtual}
+                        <option value ="{virtual.af_linked_hoofdlijst_id}" {virtual.af_selected} >{virtual.af_linked_hoofdlijst_id}</option>
+                        {foreach_end}
+                    </select>
                 </div>
+                {if_end}
+            </div>
             {if_end}
 
             <div class="col-12">
@@ -125,25 +128,25 @@
                 {define_c:st_pr_sizeselect:1}
 
                 {if:st_pr_sizeselect:=:1}
-                    <div class="{hide_sizeruler_selection}">{_Kies uw maat}</div>
-                    <select data-article-id="{selected_article_id}"   class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
+                <div class="{hide_sizeruler_selection}">{_Kies uw maat}</div>
+                <select data-article-id="{selected_article_id}"   class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
 
-                    <div class="row">
-                       {block:cart_button}
-                    </div>
+                <div class="row">
+                    {block:cart_button}
+                </div>
                 {if_end}
 
 
                 {if:st_pr_sizeselect:=:0}
 
-                    <div class="size_select_buttons {hide_sizeruler_selection}"  >
-                        {size_select}
-                    </div>
-                    {define:st_pr_sizeselect:1}
-                    {remark:We work with a hidden selector that gets set by the buttons}
-                    <select data-article-id="{selected_article_id}"   class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
-                    {define:st_pr_sizeselect:0}
-                    {block:cart_button}
+                <div class="size_select_buttons {hide_sizeruler_selection}"  >
+                    {size_select}
+                </div>
+                {define:st_pr_sizeselect:1}
+                {remark:We work with a hidden selector that gets set by the buttons}
+                <select data-article-id="{selected_article_id}"   class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
+                {define:st_pr_sizeselect:0}
+                {block:cart_button}
                 {if_end}
             </div>
 
