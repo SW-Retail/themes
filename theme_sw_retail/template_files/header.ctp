@@ -2,6 +2,7 @@
 {template_version:swretail_r5_9_34}
 
 <div class="headergrey" style="z-index:1049">
+
     <!-- Socials or USP header -->
     <div class="headertop">
         <div class="container">
@@ -37,13 +38,13 @@
                         </a>
                         {block_end}
                     </div>
-                    <div id="checkout_button" class="position-relative pl-3"> 
-                        {block_declare:checkout_button} 
-                        <a onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart" class="cursor-pointer"> 
-                            <i class="fas fa-shopping-cart tmplt_attention_color" ></i> 
-                            <span class="shopping-cart-number badge-warning tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span> 
-                        </a> 
-                        {block_end} 
+                    <div id="checkout_button" class="position-relative pl-3">
+                        {block_declare:checkout_button}
+                        <a onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart" class="cursor-pointer">
+                            <i class="fas fa-shopping-cart tmplt_attention_color" ></i>
+                            <span class="shopping-cart-number badge-warning tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span>
+                        </a>
+                        {block_end}
                     </div>
                 </div>
                 <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" onclick="swShop.mobileMenuShow()" data-menustyle="fancy"></i></div>
@@ -51,7 +52,7 @@
             <div class="row main-navigation main-menu menu-mobile" id="sw_menu">
                 <div id="navCloser" onclick="swShop.mobileMenuShow(false);"><i class="fas fa-times"></i></div>
                 <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
-                {block:menu:mainmenu:class=menu-horizontal:class=menu-main} 
+                {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
             </div>
             <div class="row backdrop" id="backdropper">
                 <!-- -->
