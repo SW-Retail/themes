@@ -3,13 +3,16 @@
 <!-- do not remove the block declarations as the ajax update of the checkout depends on it! -->
 
 <div class="row pt-3">
-    <div class="col-12 col-lg-6" id="render_cart_here">
+    <div class="col-12 col-lg-6 " id="render_cart_here">
 
         {block_declare:checkout}
         {checkout}
         {block_end}
     </div>
 </div>
+
+
+
 
 <div class="row pt-3">
     <div id="wishlist_cart" class="col-12 col-lg-6 {uitoggle_checkout_wishlist}">
@@ -32,11 +35,7 @@
 <div class="row {uitoggle_checkout_wishlist}">
 
     <div class="col-4 checkout_article_img sw_pointer" onclick="swShop.articleLoad(this);" data-link="/{wishlist_cart_article:article_link}">
-        <div class="article_image_list_mini_container">
-            <div class="article_image_list">
                 <img src="/image/small/{wishlist_cart_article:array_images:value:0:af_value2}">
-            </div>
-        </div>
     </div>
     <div class="col-8">
         <div class="row " >
@@ -69,34 +68,36 @@
 
 {block_end}
 
+
+
 <div class="row">
     <div class="col-12 col-md-6 mt-3 {uitoggle_checkout_options}" id ="customer_checkout_options">
         <div id="checkout_options_total_line" class="row">
             {block_declare:checkout_options_total}
             <div class="col-6 checkout_total_line text-left">
-                <h3>Totaal:</h3>
+                <h3>{_Totaal:}</h3>
             </div>
             <div class="col-6 checkout_total_line text-left">
-              <h3>{invoice_total_ex_shipping_costs:format:currency}</h3>
+                <h3>{invoice_total_ex_shipping_costs:format:currency}</h3>
             </div>
             {block_end}
         </div>
 
         <div class="row">
             <div class="col-12">
-                <h3>Afrekenen als</h3>
+                <h3>{_Afrekenen als}</h3>
             </div>
         </div>
 
-            <div class="webshop_select_option" onclick="swCustomer.loadCustomerLogin();return false" id="checkout_create_account" type="sw_selection">
-                Inloggen
-            </div>
-            <div class="webshop_select_option" onclick="swShop.loadCreateAccount();return false" id="checkout_create_account" type="sw_selection">
-                Account aanmaken
-            </div>
-            <div class="webshop_select_option" onclick="swShop.loadCheckOutAsGuest();return false" id="checkout_guest" type="sw_selection">
-                Afrekenen als gast
-            </div>
+        <div class="webshop_select_option" onclick="swCustomer.loadCustomerLogin();return false" id="checkout_create_account" type="sw_selection">
+            {_Inloggen}
+        </div>
+        <div class="webshop_select_option" onclick="swShop.loadCreateAccount();return false" id="checkout_create_account" type="sw_selection">
+            {_Account aanmaken}
+        </div>
+        <div class="webshop_select_option" onclick="swShop.loadCheckOutAsGuest();return false" id="checkout_guest" type="sw_selection">
+            {_Afrekenen als gast}
+        </div>
 
 
     </div>
@@ -104,31 +105,31 @@
 
 
 
-<div class="{uitoggle_checkout_form} col-12 row" id="checkout_one_page">
+<div class="{uitoggle_checkout_form} row" id="checkout_one_page">
     <div class="row col-12">
-        <div class="col-md-4">
+        <div class="col-md-4 {uitoggle_discountcodes_redeem}">
             <div class="row">
                 <div class="col-12" >
-                    <h3>Kortingscode</h3>
+                    <h3>{_Kortingscode}</h3>
                     <!-- form name is hardcoded in the backend -->
                     {form:discountcode}
-                    <p>Ik heb een kortingscode</p>
+                    <p>{_Ik heb een kortingscode}</p>
 
                     {input:discountcode:class=hold_the_line}
-                    {form_submit:Kortingscode toevoegen}
+                    {form_submit:{_Kortingscode toevoegen}}
 
                     {form_end}
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4 ">
+        <div class="col-md-4 {uitoggle_giftcards_redeem}">
             <div class="row">
                 <div class="col-12" >
-                    <h3>Cadeaubon</h3>
+                    <h3>{_Cadeaubon}</h3>
                     <!-- form name is hardcoded in the backend -->
                     {form:vouchercode}
-                    <p>Ik heb een cadeaubon</p>
+                    <p>{_Ik heb een cadeaubon}</p>
                     {input:vouchercode:class=hold_the_line}
                     {form_submit:Cadeaubon toevoegen}
                     {form_end}
@@ -139,10 +140,10 @@
         <div class="col-md-4 {uitoggle_loyalty_discount}" >
             <div class="row">
                 <div class="col-12" >
-                    <h3>Spaarpunten</h3>
+                    <h3>{_Spaarpunten}</h3>
                     <!-- form name is hardcoded in the backend -->
                     {form:loyalty_discount}
-                    <p>U heeft voldoende spaarpunten om {loyalty_point_discount:format:currency} korting te krijgen!</p>
+                    <p>{_U heeft voldoende spaarpunten om} {loyalty_point_discount:format:currency} {_korting te krijgen!}</p>
 
                 </div>
 
@@ -168,15 +169,15 @@
                 <div>
 
 
-                    *Email adres
+                    *{_Email adres}
                     {input:adres_email:validate_notempty:validate_email}
 
-                    *Voornaam
+                    *{_Voornaam}
                     {input:rl_voornaam:validate_notempty}
                     *Achternaam
                     {input:naam:validate_notempty}
 
-                    *Land
+                    *{_Land}
                     <select id='country_select' class="form-control">
                         {block_declare:country_line:clear}
 
@@ -193,28 +194,28 @@
                     <div class="col-8 px-0">*Postcode {input:adres_postcode:validate_notempty}</div><div class="col-4 px-0">*Huisnummer{input:adres_huisnummer:validate_notempty}</div>
                 </div>
                 <div>
-                    *Straat
+                    *{_Straat}
                     {input:adres_straat:validate_notempty}
 
-                    *Woonplaats
+                    *{_Woonplaats}
                     {input:adres_woonplaats:validate_notempty}
 
-                    Telefoonnummer
+                    {_Telefoonnummer}
                     {input:adres_telefoon1}
                 </div>
 
 
 
                 <div class="{uitoggle_account_create}" id="account_create" >
-                    Account aanmaken
+                    {_Account aanmaken}
                     {checkbox:account_create}
                 </div>
 
                 <div id="alt_delivery">
-                    Ander Afleveradres
+                    {_Ander Afleveradres}
                     {checkbox:alternate_address}
                 </div>
-                
+
                 <div class="{uitoggle_newsletter_subscribe}" id="checkout_newsletter_subscribe" >
                     {if:checkout_newsletter_subscribe_text:=:}
                         {_Inschrijven voor nieuwsbrief}
@@ -237,7 +238,7 @@
             <div class="col-12 px-0" >
                 {form:invoice_address}
                 <div id="checkout_password">
-                    Wachtwoord
+                    {_Wachtwoord}
                     <input type="password" id="checkout_rl_password" onblur="swCustomer.checkPassword()" class="form-control">
                 </div>
                 {form_end}
@@ -246,17 +247,17 @@
 
         <div  id="alt_delivery_form" class="hide">
             <div class="col-12 px-0" >
-                <h3>Afleveradres</h3>
+                <h3>{_Afleveradres}</h3>
                 <!-- do not just change the backend names as stuff will not be stored! -->
                 {form:delivery_address}
 
-                *Voornaam
+                *{_Voornaam}
                 {input:rl_voornaam:validate_notempty}
 
-                *Achternaam
+                *{_Achternaam}
                 {input:naam:validate_notempty}
 
-                *Land
+                *{_Land}
                 <select id='country_delivery_select' class="form-control">
                     {block_declare:del_country_line:clear}
                     <option value='{id}' {del_selected} >{name}</option>
@@ -266,13 +267,13 @@
                 </select>
 
                 <div class="">
-                    <div class="col-8 px-0">*Postcode {input:adres_postcode:validate_notempty}</div><div class="col-4 px-0">*Huisnummer{input:adres_huisnummer:validate_notempty}</div>
+                    <div class="col-8 px-0">*{_Postcode} {input:adres_postcode:validate_notempty}</div><div class="col-4 px-0">*{_Huisnummer}{input:adres_huisnummer:validate_notempty}</div>
                 </div>
 
-                *Straat
+                *{_Straat}
                 {input:adres_straat:validate_notempty}
 
-                *Woonplaats
+                *{_Woonplaats}
                 {input:adres_woonplaats:validate_notempty}
 
                 {form_end}
@@ -284,16 +285,16 @@
     <div class="col-md-4">
         <div class="row">
             <div id="send_methods" class="col-12">
-                <h3>Verzendmethode</h3>
+                <h3>{_Verzendmethode}</h3>
                 <div id='send_methods_webshop' >
                     {block_declare:sw_sendmethods}
 
-                        {block_declare:send_method_line:clear}
-                        <div class='webshop_select_option webshop_select_send_option' sendid='{sendid}' sendprice='{sendprice}' is_selected='{is_selected}' onclick='swSendMethods.selectSendMethod(this);return false;' type='sw_selection' >
-                            {name} {price}
-                        </div>
-                        <div class="send_methods_pickuplocations" id="send_methods_pickuplocations_{sendid}"></div>
-                        {block_end}
+                    {block_declare:send_method_line:clear}
+                    <div class='webshop_select_option webshop_select_send_option' sendid='{sendid}' sendprice='{sendprice}' is_selected='{is_selected}' onclick='swSendMethods.selectSendMethod(this);return false;' type='sw_selection' >
+                        {name} {price}
+                    </div>
+                    <div class="send_methods_pickuplocations" id="send_methods_pickuplocations_{sendid}"></div>
+                    {block_end}
                     {sendmethods:send_method_line}
 
                     {block_end}
@@ -301,7 +302,7 @@
             </div>
 
             <div class="col-12" >
-                <h3>Betaalmethode</h3>
+                <h3>{_Betaalmethode}</h3>
 
                 <div id='payment_methods_webshop' >
                     {ideal_options}
@@ -321,10 +322,10 @@
     <div class="col-md-4" id="totals">
         {block_declare:totals}
         <div class="col-12">
-            <h3>Totaal</h3>
+            <h3>{_Totaal}</h3>
             <div class="row">
                 <div class="col-6">
-                    Totaal artikelen:
+                    {_Totaal artikelen:}
                 </div>
                 <div class="col-6 checkout_total_line text-left">
                     {invoice_total_ex_shipping_costs:format:currency}
@@ -332,7 +333,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    Verzendkosten:
+                    {_Verzendkosten:}
                 </div>
                 <div class="col-6 checkout_total_line text-left">
                     {shipping_costs:format:currency}
@@ -340,7 +341,7 @@
             </div>
             <div class="row {uitoggle_paid}">
                 <div class="col-12">
-                    <h3>Betaald</h3>
+                    <h3>{_Betaald}</h3>
 
                 </div>
 
@@ -375,7 +376,7 @@
             </div>
             <div class="row text-warning {uitoggle_still_to_spend}">
                 <div class="col-8">
-                    Nog te besteden. Dit zal bij geen gebruik afgerond worden naar 0.
+                    {_Nog te besteden. Dit zal bij geen gebruik afgerond worden naar 0.}
                 </div>
                 <div class="col-4 checkout_total_line text-left">
                     {still_to_spend:format:currency}
@@ -383,7 +384,7 @@
             </div>
             <div class="row checkout_total_block">
                 <div class="col-6">
-                    <h3>Te betalen: </h3>
+                    <h3>{_Te betalen:}</h3>
                 </div>
                 <div class="col-6 checkout_total_line text-left">
                     <h3>{invoice_remaining:format:currency}</h3>
@@ -392,7 +393,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    BTW:
+                    {_BTW:}
                 </div>
                 <div class="col-6 checkout_total_line text-left">
                     {invoice_total_vat:format:currency}
@@ -401,14 +402,14 @@
             {form:terms_and_conditions}
             <div class="row">
                 <div class="col-10">
-                    Ik heb de algemene voorwaarden gelezen
+                    {_Ik heb de algemene voorwaarden gelezen}
                 </div>
                 <div class="col-2 checkout_total_line text-left">
                     {checkbox:consent:validate_notempty}
                 </div>
 
                 <div class="col-12">
-                    <h3>Opmerkingen</h3>
+                    <h3>{_Opmerkingen}</h3>
                     {textarea:remark}
                 </div>
             </div>
@@ -416,7 +417,7 @@
 
             <div class="row">
                 <div class="col-12 pt-3 checkout_total_line text-right">
-                    <button  id="sw_finish_cart" class="tmplt_sales_color" onclick="swPaymentProvider.startPayment();return false">Afrekenen</button>
+                    <button  id="sw_finish_cart" class="tmplt_sales_color" onclick="swPaymentProvider.startPayment();return false">{_Afrekenen}</button>
 
                 </div>
             </div>
