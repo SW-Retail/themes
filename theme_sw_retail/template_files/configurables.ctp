@@ -13,9 +13,7 @@
 
 <!--    template_def: name in UI:description in UI:type of field:::default value:parameter name in theme , gets prefixed with theme_ -->
 {template_def:Groepen filter:Laat een groepenfilter zien. Hiervoor moet een menu leftmenu aangemaakt worden:checkbox:::0:group_filter}
-
 {template_def:Artikel beschrijving:Artikel beschrijving:text:::\{artfabr\} / \{fabrikant\}:article_description:article}
-
 {template_def:Aantal weergave:Aantal artikelen weergeven onderaan het zoekresultaat:text:::\{amt_articles\} artikelen uit \{amt_articles_total\}:article_amounts:article_overview}
 
 {trans:nl:paging_block_Volgende:Volgende}
