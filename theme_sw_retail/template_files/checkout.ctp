@@ -17,11 +17,11 @@
 <div class="row pt-3">
     <div id="wishlist_cart" class="col-12 col-lg-6 {uitoggle_checkout_wishlist}">
         {block_declare:wishlist_cart}
-        <h2>{_Verlanglijst}</h2>
+        {block:wishlist}
 
 
         {foreach:wishlist_articles:wishlist_article}
-        {define:wishlist_cart_article:{@load:article:{wishlist_article.hoofdlijst_id}}}
+        {define:wishlist_cart_article:{@load:article:{wishlist_article.article_id}}}
         {block:wishlist_article_line}
         {foreach_end}
 
