@@ -22,9 +22,10 @@
         {if_end}
     {if_end}
     
-    <div class="col-12 {uitoggle_addtowishlist}">
-        <button class="btn  sw-add-to-cart-button " onclick="swShop.addToWishlist(this);return false;"> <i class="{uitoggle_addtowishlist_button_class}"></i> </button>
-
+    <div class="col-12">
+        {if:wishlist_active:=:true}
+            {block:wishlist_add_button}
+        {if_end}
     </div>
 
 {block_end}
