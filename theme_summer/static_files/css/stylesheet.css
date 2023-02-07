@@ -1674,9 +1674,7 @@ input[type=checkbox], input[type=radio] {
   #content h2 {
     font-size: 1.6rem;
   }
-  .article_image_list {
-    height: 200px;
-  }
+  
   h3 {
     font-size: 1.35rem;
   }
@@ -1706,9 +1704,7 @@ input[type=checkbox], input[type=radio] {
   #content h2 {
     font-size: 2rem;
   }
-  .article_image_list {
-    height: 300px;
-  }
+  
   h3 {
     font-size: 1.75rem;
   }
