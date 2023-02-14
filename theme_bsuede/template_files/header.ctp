@@ -59,7 +59,7 @@
                     <div class="col-8 "><i class="fas fa-bars" id="menu-toggler" data-menustyle="fancy"  onclick="swShop.mobileMenuShow()"></i></div>
                     <div class="col-3 ">
                         <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login_small" ><i class="fas fa-sign-in-alt tmplt_attention_color"></i></a>
-                        <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i>asdfasdf</a>
+                        <a onclick="swShop.toggleMenu('customer-menu')" id="sw_customer_options_small" > <i class="fas fa-user-alt tmplt_attention_color"></i></a>
                         <a href="/checkout" id="sw_shoppingcart" ><i class="fas fa-shopping-cart tmplt_attention_color"></i> </a>
                     </div>
 
