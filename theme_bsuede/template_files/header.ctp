@@ -27,7 +27,7 @@
                         {block:menu:customer-menu:class=menu_customer}
                     </div>
                     <div class="col-1 my-auto">
-                        <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
+                        <div id="wishlist_button" class="position-relative {uitoggle_wishlist_active}">
                             {block_declare:wishlist_button}
                             <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="cursor-pointer">
                                 <i class="fas fa-heart tmplt_attention_color" ></i>
