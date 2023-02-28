@@ -544,6 +544,7 @@ li.filter-block-header {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-left: -90px;
     padding: 0px 40px 20px 20px;
+    top: 1.4em;
 }
 
 .menu_customer a {
