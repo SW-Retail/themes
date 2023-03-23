@@ -42,8 +42,12 @@
         {if:product_zoom:=:true}
             <div class="article-item-overlayer zoom_overlay"><i class="fas fa-search-plus"></i></div>
         {if_end}
-        <div class="article_image_detail"><img src="/image/{article_image:0}" alt="{article_image_alt:0}"/></div>
-        {article_images}
+        <div id="article_image_detail">
+            {block_declare:article_image_detail}
+                <div class="article_image_detail"><img src="/image/{article_image:0}" alt="{article_image_alt:0}"/></div>
+                {article_images}
+            {block_end}
+        </div>
     </div>
     <div class="col-10 offset-1 offset-md-0 col-md-5 col-lg-5 product-details">
         <!-- do not change the id (or change the javascript also) and do not remove the block. it is needed for ajax loading for prices -->
