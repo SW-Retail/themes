@@ -47,7 +47,7 @@
                 {article_images}
             {block_end}
         </div>        
-        {article_images}
+        
     </div>
     <div class="col-10 offset-1 offset-md-0 col-md-5 col-lg-5 product-details">
         <!-- do not change the id (or change the javascript also) and do not remove the block. it is needed for ajax loading for prices -->
