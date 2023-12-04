@@ -7,7 +7,7 @@
 {if:slider:=:0}
     <div class="col-6 col-lg-3 article_item_small"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         {block:article_list_small_top:optional}
-        <a title="{artoms}" href="{article_link}" class="article_item_link">
+        <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
             <div class="article_content">
                 <div class="row">
                     <div class="article_image_list col-12">
@@ -44,7 +44,7 @@
     <li class="splide__slide">
         <div class=""  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
             <div class="article_item_small_overlay">
-                <a title="{artoms}" href="{article_link}" class="article_item_link">
+                <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
                     <div class="article_content">
                         <div class="row">
                             <div class="article_image_list col-12">
