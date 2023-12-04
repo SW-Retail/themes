@@ -8,7 +8,7 @@
 <div class="col-{autocalc_width} article_item_small"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
     {block:article_list_small_top:optional}
     <div class="article_item_small_overlay">
-        <a title="{artoms}" href="{article_link}" class="article_item_link">
+        <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
             <div class="article_content">
                 {if:overlay_text:<>:}
                 <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
@@ -49,7 +49,7 @@
 <li class="splide__slide">
     <div class=""  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         <div class="article_item_small_overlay">
-            <a title="{artoms}" href="{article_link}" class="article_item_link">
+            <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
                 <div class="article_content">
                     {if:overlay_text:<>:}
                     <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
