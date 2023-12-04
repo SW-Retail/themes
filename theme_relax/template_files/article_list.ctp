@@ -8,7 +8,7 @@
         <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
     {if_end}
 
-    <a title="{artoms}" href="{article_link}" class="article_item_link">
+    <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
         <div class="article_content_list">
             <div class="article_image_list_container">
                 <div class="article_image_list">
