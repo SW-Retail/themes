@@ -7,7 +7,7 @@
 {if:slider:=:0}
     <div class="col-6 col-md-3 article_item_small mb-5"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         {block:article_list_small_top:optional}
-        <a title="{artoms}" href="{article_link}" class="article_item_link">
+        <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
             <div class="article_content">
                 <div class="row">
                     <div class="col-12 my-auto">
@@ -48,7 +48,7 @@
     <li class="splide__slide">
         <div class=""  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
             <div class="article_item_small_overlay">
-                <a title="{artoms}" href="{article_link}" class="article_item_link">
+                <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
                     <div class="article_content">
                         {if:overlay_text:<>:}
                         <div class="article-item-overlayer aio_rotated">{overlay_text}</div>
