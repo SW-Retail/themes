@@ -59,7 +59,7 @@
     <script src="{sw_cdn_url}/plugins/bootstrap/js/bootstrap.bundle.min.js?v={version}" ></script>
 
     <!-- The webshop app -->
-    <script src="/javascript.js?v={version}" ></script>
+    <script src="/javascript.min.js?v={version}" ></script>
 
     <link rel="icon" href="/{favicon}">
 

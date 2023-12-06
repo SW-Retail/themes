@@ -65,7 +65,7 @@
 
 
     <!-- The webshop app -->
-    <script src="/javascript.js?v={version}" ></script>
+    <script src="/javascript.min.js?v={version}" ></script>
 
 
     <link rel="icon" href="/{favicon}">
