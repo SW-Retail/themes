@@ -3,16 +3,18 @@
 
 <div class="headergrey" style="z-index:1049">
 
-    <!-- Socials or USP header -->
-    <div class="headertop">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    {block:menu:menutop:class=menu-horizontal}
+    {if:{menu_count:menutop}:<>:0}
+        <!-- Socials or USP header -->
+        <div class="headertop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {block:menu:menutop:class=menu-horizontal}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {if_end}
 
     <!-- Navigation -->
     <div class="tmplt_base_color tmplt_base_color_text navigationbar" >
