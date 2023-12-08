@@ -5,15 +5,17 @@
 <div class="sticky-top headergrey fixed-top" style="z-index:1049">
     {block:hook:hook_before_header:page_block}
     <!-- Socials or USP header -->
-    <div class="headertop">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    {block:menu:menutop:class=menu-horizontal}
+    {if:{menu_count:menutop}:<>:0}
+        <div class="headertop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {block:menu:menutop:class=menu-horizontal}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {if_end}
 
     <!-- Navigation -->
     <div class="tmplt_base_color tmplt_base_color_text navigationbar" >
