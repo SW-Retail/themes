@@ -12,8 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4 col-md-6">
-                <!--{block:menu:menutop:class_menu-horizontal}-->
+            <div class="col-4 col-md-6">                
                 <a href="/" id="shoplogo"><img height="80px" src="/{shoplogo}" title="{shopname}" /></a>
             </div>
             <div class="col-8 col-md-6 col-lg-5">
