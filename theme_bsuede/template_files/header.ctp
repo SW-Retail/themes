@@ -4,13 +4,15 @@
 <div class="sticky-top headergrey fixed-top">
     {block:hook:hook_before_header:page_block}
     <div class="container pb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    {block:menu:menutop:class=menu-horizontal}
+        {if:{menu_count:menutop}:<>:0}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {block:menu:menutop:class=menu-horizontal}
+                    </div>
                 </div>
             </div>
-        </div>
+        {if_end}
         <div class="row">
             <div class="col-4 col-md-6">                
                 <a href="/" id="shoplogo"><img height="80px" src="/{shoplogo}" title="{shopname}" /></a>
