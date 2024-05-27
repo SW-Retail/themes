@@ -95,6 +95,8 @@
     <button onclick="swShopHelper.modalHide();"   >OK</button>
 </div>
 
+{block:notify_in_stock_html_helpers}
+
 <!-- UI blocking div can be accessed using swShopHelper.blockUI  -->
 <div class="blocked" id="block-ui"> <i class="fas fa-spinner fa-pulse" style="font-size:100px; position:relative;top: calc(50% - 100px);left: 50%;"></i> </div>
 
