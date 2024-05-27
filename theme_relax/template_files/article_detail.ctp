@@ -21,6 +21,13 @@
             </div>
         {if_end}
     {if_end}
+
+    {if:show_notify_me_in_stock:<>:}
+        <div class="col-12">
+            <button class="btn  btn-warning" onclick="swShop.notifyMe(this);return false;">{_Geef me een seintje}</button>
+            <p>{_Ontvang een e-mail van ons wanneer dit artikel weer op voorraad is!}</p>
+        </div>
+    {if_end}
     
     <div class="col-12">
         {if:wishlist_active:=:true}
