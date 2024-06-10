@@ -1307,7 +1307,7 @@ li.filter-block-header {
 
 .shopping-cart-number {
   position: absolute;
-  top: 5px;
+  top: -10px;
   padding-left: 9px;
   padding-right: 9px;
   border-radius: 9px;
