@@ -30,7 +30,7 @@
                 <div class="col-6 col-lg-2 pr-4 d-flex align-items-center justify-content-end">
                     <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="cursor-pointer"><i class="fas fa-user tmplt_attention_color"></i></a>
                     <div  class="position-relative">
-                        <a class='sw_customer-options_button position-relative' id="sw_customer_options" class="cursor-pointer"> <i class="fas fa-user-check tmplt_attention_color "></i></a>
+                        <a class='sw_customer-options_button position-relative hide' id="sw_customer_options" class="cursor-pointer"> <i class="fas fa-user-check tmplt_attention_color "></i></a>
                         {block:menu:customer-menu:class=menu_customer}
                     </div>
                     <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
