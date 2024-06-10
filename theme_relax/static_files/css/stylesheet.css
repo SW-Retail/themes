@@ -1131,4 +1131,15 @@ fieldset[disabled] .btn-addtocart.active {
 	height:40px;
 }
 	
-	
+#sw_wishlist_count, #sw_shoppingcart_count {
+    font-size: 12px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    color: #fff;
+    top: -10px;
+    left: 30px;
+    cursor: pointer;
+    border-radius: 9px;
+}	
