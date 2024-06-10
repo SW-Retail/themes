@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-1 my-auto">
                         <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" ><i class="fas fa-user tmplt_attention_color"></i></a>
-                        <a class='sw_customer-options_button' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
+                        <a class='sw_customer-options_button hide' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
                         {block:menu:customer-menu:class=menu_customer}
                     </div>
                     <div class="col-1 my-auto">
