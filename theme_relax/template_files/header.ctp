@@ -34,7 +34,7 @@
                             <a class='sw_customer-options_button position-relative visible-large' id="sw_customer_options" class="cursor-pointer"> <i class="fas fa-user-alt tmplt_attention_color "></i></a>
                             {block:menu:customer-menu:class=menu_customer}
                         </div>
-                        <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
+                        <div id="wishlist_button" class="pl-3 {uitoggle_wishlist_active}">
                             {block_declare:wishlist_button}
                             <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="cursor-pointer">
                                 <i class="fas fa-heart tmplt_attention_color" ></i>
