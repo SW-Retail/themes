@@ -1239,3 +1239,15 @@ fieldset[disabled] .btn-addtocart.active {
     cursor: pointer;
     border-radius: 9px;
 }
+
+/* improvements for the slider with articles */
+.splide__slide  .article_header 
+{
+  white-space: nowrap; /* Prevents line breaks */
+  overflow: hidden;    /* Hides overflow */
+  text-overflow: ellipsis; /* Adds "..." for overflowed text */
+}
+
+.splide__slide .article_content {
+box-shadow:none;
+}
