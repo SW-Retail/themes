@@ -76,7 +76,7 @@
 
         <div class="row" id="render_article_detail_here">
 
-            {block_declare:article_prices:clear}
+            {block_declare:article_prices}
 
             <div class="col-12">
                 <p>{*theme_article_description}</p>
