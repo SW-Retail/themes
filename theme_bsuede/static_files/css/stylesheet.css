@@ -1251,3 +1251,11 @@ fieldset[disabled] .btn-addtocart.active {
 .splide__slide .article_content {
 box-shadow:none;
 }
+
+
+#customer-menu .menu_customer {
+    display:block;
+    position:relative;
+    box-shadow:none;
+}
+
