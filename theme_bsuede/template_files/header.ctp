@@ -25,7 +25,7 @@
                     <div class="col-1 my-auto">
                         <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" ><i class="fas fa-user tmplt_attention_color"></i></a>
                         <a class='sw_customer-options_button hide' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
-                        {block:menu:customer-menu:class=menu_customer}
+                        {block:menu:customer-menu:class=menu_customer_mobile}
                     </div>
                     <div class="col-1 my-auto">
                         <div id="wishlist_button" class="{uitoggle_wishlist_active}">
