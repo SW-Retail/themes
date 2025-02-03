@@ -97,23 +97,20 @@
 
                 {remark:sizeruler or non-sizeruler display}
                 <div class="col-12 mt-3 mb-3">
-                    {define_c:st_pr_sizeselect:1}
+                         {define_c:st_pr_sizeselect:1}
 
                         {if:st_pr_sizeselect:=:1}
                             <div class="{hide_sizeruler_selection}">Kies uw maat</div>
-                            <select data-article-id="{selected_article_id}" class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
+                            <div class="">{block:full_sizeruler_selectbox}</div>
                         {if_end}
-
+        
                         {if:st_pr_sizeselect:=:0}
-                        <div class="size_select_buttons {hide_sizeruler_selection}"  >
-                            {size_select}
-                        </div>
-                        {define:st_pr_sizeselect:1}
-                        {remark:We work with a hidden selector that gets set by the buttons}
-                        <select data-article-id="{selected_article_id}" class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
-                        {define:st_pr_sizeselect:0}
-
-                    {if_end}
+                            {block:full_sizeruler_buttonbox}
+                            {define:st_pr_sizeselect:1}
+                            {remark:We work with a hidden selector that gets set by the buttons}
+                            <div class="hide">{block:full_sizeruler_selectbox}</div>
+                            {define:st_pr_sizeselect:0}
+                        {if_end}
                 </div>
                 <div class="col-12 mb-3">
                     <div class="{uitoggle_pricing_normal}">
