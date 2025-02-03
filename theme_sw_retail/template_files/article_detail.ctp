@@ -2,37 +2,39 @@
 {template_version:swretail_r5_9_66}
 
 {block_declare:cart_button:clear}
-{if:show_add_to_cart:<>:}
-{if:st_pr_show_amt:=:true}
-<div class="col-12  {uitoggle_addtocart}  ">
-    <div class="input-group ">
-        <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
-        <div class="input-group-append ">
-            <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;" >{_Aan winkelwagen toevoegen}</button>
-        </div>
-    </div>
-</div>
-{if_end}
+    {if:show_add_to_cart:<>:}
+        {if:st_pr_show_amt:=:true}
+            <div class="col-12  {uitoggle_addtocart}  ">
+                <div class="input-group ">
+                    <input id="cart_amount" type="text" class="form-control  " placeholder="Aantal" style="width:50px"/>
+                    <div class="input-group-append ">
+                        <button class="btn btn-outline-secondary tmplt_sales_color " onclick="swShop.addToCart(this);return false;" >{_Aan winkelwagen toevoegen}</button>
+                    </div>
+                </div>
+            </div>
+        {if_end}
 
-{if:st_pr_show_amt:<>:true}
-<div class="col-12 {uitoggle_addtocart}">
-    <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
-</div>
-{if_end}
-{if_end}
+        {if:st_pr_show_amt:<>:true}
+            <div class="col-12 {uitoggle_addtocart}">
+                <button class="btn btn-addtocart  sw-add-to-cart-button" onclick="swShop.addToCart(this);return false;">{_Aan winkelwagen toevoegen}</button>
+            </div>
+        {if_end}
+    {if_end}
 
-{if:show_notify_me_in_stock:<>:}
+
+    {if:show_notify_me_in_stock:<>:}
         <div class="col-12">
             <button class="btn  btn-warning" onclick="swShop.notifyMe(this);return false;">{_Geef me een seintje}</button>
             <p>{_Ontvang een e-mail van ons wanneer dit artikel weer op voorraad is!}</p>
         </div>
-{if_end}
-
-<div class="col-12">
-    {if:wishlist_active:=:true}
-        {block:wishlist_add_button}
     {if_end}
-</div>
+
+
+    <div class="col-12">
+        {if:wishlist_active:=:true}
+            {block:wishlist_add_button}
+        {if_end}
+    </div>
 {block_end}
 
 
@@ -141,23 +143,20 @@
 
                 {if:st_pr_sizeselect:=:1}
                 <div class="{hide_sizeruler_selection}">{_Kies uw maat}</div>
-                <select data-article-id="{selected_article_id}"   class="size-selector {hide_sizeruler_selection}" id="sw_sizeruler_select"> {size_select} </select>
-
+                <div class="">{block:full_sizeruler_selectbox}</div>
                 <div class="row">
                     {block:cart_button}
                 </div>
                 {if_end}
 
 
-                {if:st_pr_sizeselect:=:0}
-
-                <div class="size_select_buttons {hide_sizeruler_selection}"  >
-                    {size_select}
-                </div>
-                {define:st_pr_sizeselect:1}
-                {remark:We work with a hidden selector that gets set by the buttons}
-                <select data-article-id="{selected_article_id}"   class="size-selector hide" id="sw_sizeruler_select"> {size_select} </select>
-                {define:st_pr_sizeselect:0}
+                 {if:st_pr_sizeselect:=:0}
+                    {block:full_sizeruler_buttonbox}
+                    {define:st_pr_sizeselect:1}
+                    {remark:We work with a hidden selector that gets set by the buttons}
+                    <div class="hide">{block:full_sizeruler_selectbox}</div>
+                    {define:st_pr_sizeselect:0}
+                {if_end}
                 {block:cart_button}
                 {if_end}
             </div>
