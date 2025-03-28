@@ -9,14 +9,16 @@
 
     <a title="{artoms:format:htmlattribute}" href="{article_link}" class="article_item_link">
         <div class="article_content_list h-100">
-            <div class="row">
-                <div class="col-12 my-auto">
-                    {if:has_image:=:false}
-                        <img class="img-fluid" src="{article_image:0}" alt="{article_image_alt:0}"/>
-                    {if_end}
-                    {if:has_image:=:true}
-                        <img class="img-fluid" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
-                    {if_end}
+            <div class="article_image_list">
+                <div class="row">
+                    <div class="col-12 my-auto">
+                        {if:has_image:=:false}
+                            <img class="img-fluid" src="{article_image:0}" alt="{article_image_alt:0}"/>
+                        {if_end}
+                        {if:has_image:=:true}
+                            <img class="img-fluid" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
+                        {if_end}
+                    </div>
                 </div>
             </div>
 
