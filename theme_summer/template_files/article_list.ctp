@@ -36,16 +36,8 @@
                         {block:wishlist_add_button}
                     {if_end}
                 </div>
-
-				{if:show_notify_me_in_stock:=:1}
-					<div>
-						<button class="btn-addtocart" onclick="swShop.notifyMe(this);event.stopPropagation();return false;">{_Geef me een seintje}</button>
-						{if:wishlist_active:=:true}
-							{block:wishlist_add_button}
-						{if_end}
-					</div>
-				{if_end}
-			{if_end}
+                {if_end}
+            {if_end}
             
             <div class="article_remaining mt-3">
                 <div class="article_header">
@@ -66,5 +58,3 @@
     </a>
     {block:article_list_bottom:optional}
 </div>
-
-
