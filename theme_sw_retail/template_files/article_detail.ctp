@@ -156,8 +156,7 @@
                     {remark:We work with a hidden selector that gets set by the buttons}
                     <div class="hide">{block:full_sizeruler_selectbox}</div>
                     {define:st_pr_sizeselect:0}
-                {if_end}
-                {block:cart_button}
+                    {block:cart_button}
                 {if_end}
             </div>
 
