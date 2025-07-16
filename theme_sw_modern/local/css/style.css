@@ -20,6 +20,18 @@
   }
 }
 
+/* USPS */
+.usps {
+  margin-bottom: 96px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .usps {
+    margin-bottom: 36px;
+  }
+}
+
 /* Paragraphs */
 .paragraphs {
   margin-bottom: 96px;
@@ -27,16 +39,26 @@
   .row + .row {
     margin-top: 36px;
   }
+
+  &:has(+ .overview-products) {
+    padding-bottom: 96px;
+    border-bottom: 1px solid #f0f0f0;
+  }
 }
 
 @media (max-width: 768px) {
   .paragraphs {
     margin-bottom: 36px;
+
+    &:has(+ .overview-products) {
+      padding-bottom: 36px;
+    }
   }
 }
 
 /* Products */
-.selected-products {
+.selected-products,
+.overview-products {
   margin-bottom: 96px;
 
   @media (max-width: 768px) {
@@ -46,6 +68,16 @@
 
 .product {
   background-color: #f0f0f0;
+}
+
+.product__discount {
+  /* Temporary convert to theme color of CMS */
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  right: 12px;
+  top: -12px;
 }
 
 .product__image {
@@ -62,6 +94,20 @@
   color: white;
   font-size: 14px;
   min-height: 36px;
+}
+
+.product__price--discount {
+  font-size: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 1px;
+    background-color: white;
+    transform: rotate(-12deg);
+  }
 }
 
 .product__link {
