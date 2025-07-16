@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>theme_sw_modern</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3edab1dc16.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navigation">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-6 h-100 d-flex align-items-center">
+                    <a href="#" class="navigation__logo"><img src="files/logo.png" alt="SW-Retail logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="container fixed-top d-flex justify-content-end align-items-center column-gap-3">
+            <div class="navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
+                <i class="fas fa-user-lock"></i>
+            </div>
+            <div class="navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <button class="navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="header header--products position-relative" aria-labelledby="header__title">
+            <div class="header__image position-absolute">
+                <img class="h-100 w-100" src="./files/header.png" alt="Dames-, heren- en kinderkleding" />
+            </div>
+            <div class="container position-relative z-1">
+                <div class="header__text text-center text-white fs-4 fw-medium">
+                    <h1 class="fw-bolder text-uppercase" id="header__title">Dames-, heren- en kinderkleding</h1>
+
+                    <p>Verander je look en ontdek jouw nieuwe favoriete outfits.</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="products" aria-labelledby="overview-products__title">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="row g-4 mb-1 mb-md-3">
+                            <div class="col-12 col-sm-3 h-100 d-flex align-items-center">
+                                <span class="products__filter-title d-block pb-1 fs-4 fw-bold w-100">Kleding</span>
+                            </div>
+                            <div class="col-12 col-sm-9 h-100 d-flex flex-wrap align-items-center gap-3 justify-content-center justify-content-sm-end">
+                                <select>
+                                    <option selected>12</option>
+                                    <option>24</option>
+                                    <option>48</option>
+                                    <option>96</option>
+                                </select>
+                                <select>
+                                    <option selected>Naam Z-A</option>
+                                    <option>Naam A-Z</option>
+                                    <option>Prijs oplopend</option>
+                                    <option>Prijs aflopend</option>
+                                    <option>Nieuwste eerst</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-none d-md-block">
+                        <form class="filter">
+                            <div class="filter-block">
+                                <li class="filter-block-header list-unstyled fw-bold text-uppercase text-5 mb-md-4">Maat</li>
+                                <div class="filter-block-options">
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2944" id="2944" />
+                                        <label for="2944">
+                                            <span>25/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2945" id="2945" />
+                                        <label for="2945">
+                                            <span>2 jr (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2947" id="2947" />
+                                        <label for="2947">
+                                            <span>XXS (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2948" id="2948" />
+                                        <label for="2948">
+                                            <span>26/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2950" id="2950" />
+                                        <label for="2950">
+                                            <span>3 jr (1)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2951" id="2951" />
+                                        <label for="2951">
+                                            <span>XS (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2952" id="2952" />
+                                        <label for="2952">
+                                            <span>27/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2954" id="2954" />
+                                        <label for="2954">
+                                            <span>4 jr (2)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2955" id="2955" />
+                                        <label for="2955">
+                                            <span>S (11)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2956" id="2956" />
+                                        <label for="2956">
+                                            <span>28/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2958" id="2958" />
+                                        <label for="2958">
+                                            <span>5 jr (2)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2959" id="2959" />
+                                        <label for="2959">
+                                            <span>M (11)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2960" id="2960" />
+                                        <label for="2960">
+                                            <span>29/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2962" id="2962" />
+                                        <label for="2962">
+                                            <span>6 jr (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2963" id="2963" />
+                                        <label for="2963">
+                                            <span>L (12)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2964" id="2964" />
+                                        <label for="2964">
+                                            <span>30/32 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2966" id="2966" />
+                                        <label for="2966">
+                                            <span>7 jr (1)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2967" id="2967" />
+                                        <label for="2967">
+                                            <span>XL (10)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2968" id="2968" />
+                                        <label for="2968">
+                                            <span>25/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2970" id="2970" />
+                                        <label for="2970">
+                                            <span>8 jr (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2971" id="2971" />
+                                        <label for="2971">
+                                            <span>XXL (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2972" id="2972" />
+                                        <label for="2972">
+                                            <span>26/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2974" id="2974" />
+                                        <label for="2974">
+                                            <span>9 jr (5)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2975" id="2975" />
+                                        <label for="2975">
+                                            <span>XXXL (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2976" id="2976" />
+                                        <label for="2976">
+                                            <span>10 jr (2)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2977" id="2977" />
+                                        <label for="2977">
+                                            <span>27/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2979" id="2979" />
+                                        <label for="2979">
+                                            <span>11 jr (6)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2980" id="2980" />
+                                        <label for="2980">
+                                            <span>28/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2981" id="2981" />
+                                        <label for="2981">
+                                            <span>12 jr (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2982" id="2982" />
+                                        <label for="2982">
+                                            <span>29/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2983" id="2983" />
+                                        <label for="2983">
+                                            <span>13 jr (5)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2984" id="2984" />
+                                        <label for="2984">
+                                            <span>30/34 (3)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2985" id="2985" />
+                                        <label for="2985">
+                                            <span>14 jr (5)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2986" id="2986" />
+                                        <label for="2986">
+                                            <span>15 jr (4)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-block-item">
+                                        <input type="checkbox" name="2987" id="2987" />
+                                        <label for="2987">
+                                            <span>16 jr (3)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="row g-4 gy-lg-5">
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <span class="product__discount position-absolute">Aanbieding</span>
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 d-flex align-items-center fw-semibold gap-2">
+                                                <span class="product__price--discount position-relative fw-light">&euro;99,00</span>&euro;89,00
+                                            </span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <span class="product__discount position-absolute">Aanbieding</span>
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 d-flex align-items-center fw-semibold gap-2">
+                                                <span class="product__price--discount position-relative fw-light">&euro;99,00</span>&euro;89,00
+                                            </span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <span class="product__discount position-absolute">Aanbieding</span>
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 d-flex align-items-center fw-semibold gap-2">
+                                                <span class="product__price--discount position-relative fw-light">&euro;99,00</span>&euro;89,00
+                                            </span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print">
+                                <div class="col-12 product px-3 pt-3 pb-4 position-relative h-100">
+                                    <div class="product__image d-flex align-items-center justify-content-center p-3">
+                                        <img class="h-100 w-100 object-fit-contain" src="files/shirt.png" alt="Blouse met print" />
+                                    </div>
+                                    <div class="product__content text-center">
+                                        <h3 class="fs-5 fw-normal">Blouse met print</h3>
+
+                                        <div class="product__bottom mt-3 d-flex flex-wrap justify-content-center gap-2">
+                                            <span class="product__price rounded-pill px-4 py-2 fw-semibold">&euro;89,00</span>
+                                            <a class="product__link d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12 pt-3 pt-lg-4">
+                            <div class="row gx-4 gy-1">
+                                <div class="col-12 col-sm-4 d-flex align-items-center justify-content-center justify-content-sm-start fs-6">
+                                    <p>12 artikelen uit 21</p>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <ul class="pager list-unstyled d-flex align-items-center justify-content-center justify-content-sm-end gap-2">
+                                        <li class="pager-item">
+                                            <a class="pager-link pager-link-selected" href="/kleding?page=0">1</a>
+                                        </li>
+
+                                        <li class="pager-item">
+                                            <a class="pager-link a" href="/kleding?page=1">2</a>
+                                        </li>
+
+                                        <li class="pager-item">
+                                            <a class="pager-link a" href="/kleding?page=1" >Volgende</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__top">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fs-5 fw-bold d-block text-uppercase mb-1 mb-lg-3">Bestellen en verzenden</span>
+                        <p>Bestellen en verzenden is heel eenvoudig via onze webwinkel. Je pakket wordt verstuurd met PostNL</p>
+                        <div class="flex flex-wrap footer__shipping-logos">
+                            <img src="files/postnl.jpg" title="Postnl logo" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fs-5 fw-bold d-block text-uppercase mb-1 mb-lg-3">Betaalmethoden</span>
+                        <p>Betaal veilig en snel via iDeal</p>
+                        <div class="flex flex-wrap footer__payment-logos">
+                            <img src="files/ideal.png" title="Ideal logo" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fs-5 fw-bold d-block text-uppercase mb-1 mb-lg-3">Onze service</span>
+                        <a href="#">Link 1.1</a>
+                        <a href="#">Link 1.2</a>
+                        <a href="#">Link 1.3</a>
+                        <a href="#">Link 1.4</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fs-5 fw-bold d-block text-uppercase mb-1 mb-lg-3">Contact Demo webshop</span>
+                        <p>Elbe 12<br>7908 HB Hoogeveen<br>0528-200027</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom py-3">
+            <div class="container">
+                <div class="row">
+                    <p class="fs-6 text-black">© Copyright 2025 SW-Retail - Powered bij <a href="https://www.swretail.nl/ecommerce/" target="_blank">SW-Retail webshop</a> - Design by <a href="https://www.swretail.nl/ecommerce/" target="_blank">SW-Retail</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
