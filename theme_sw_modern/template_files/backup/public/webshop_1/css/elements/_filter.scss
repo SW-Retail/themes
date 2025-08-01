@@ -1,0 +1,110 @@
+
+#category-filter-button, #filter-closer{
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    [data-view="filter"]{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height: 100vh;
+        background-color: #fff;
+        z-index: 1050;
+        padding: 0;
+        overflow-y: scroll;
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+        
+        &#category-filter{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+
+        #filter-closer{
+            display: block;
+            color: #fff;
+            padding: 5px 0px;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        
+            i, p{
+                display: inline-block;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            i{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 40px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .filter{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        form.filter{
+            >.filter-block{
+                border-top: 1px solid #ebebeb;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                li{
+                    position: relative;
+
+                    &::before{
+                        position: absolute;
+                        right: 30px;
+                        left: unset;
+                        content: '\f078';
+                        color: #6f6f6f;
+                        font-size: 1rem;
+                    }
+
+                    &.filter-open{
+                        &::before{
+                            content: '\f077';
+                        }
+                    }
+                }
+
+                &:last-child{
+                    border-bottom: 1px solid #ebebeb;
+                }
+            }
+        }
+    }
+
+    #category-filter-button{
+        display: block;
+        color: #fff;
+        border-radius: .25rem;
+        box-shadow: 0px 2px 24px -9px rgba(0,0,0,0.6);
+        padding: 5px 0px;
+    
+        position: fixed;
+        width: 280px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 20px;
+        z-index: 5;
+        
+        i, p{
+            display: inline-block;
+        }
+    }
+}

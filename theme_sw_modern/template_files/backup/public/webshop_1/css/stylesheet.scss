@@ -1,0 +1,629 @@
+.sw-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999;
+}
+
+.sw-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  max-width: 40rem;
+  border-radius: 0.2rem;
+}
+
+.blocked {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.01s, opacity 0.01s 0s, transform 0.01s;
+  z-index: 999;
+}
+.blocked-show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.01s 0s, transform 0.01s;
+}
+
+#sw-modal-footer {
+  float: right;
+}
+
+#sw-modal-title {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  padding: 0px;
+}
+
+#sw-modal-title > h3 {
+  margin: 2px;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.sw_pointer {
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 10px;
+  line-height: 1.5;
+}
+button:hover,
+div.webshop_select_option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+button:focus {
+  outline: none;
+}
+
+ul.menu-vertical,
+ul.menu-vertical li {
+  list-style-type: none;
+  padding: 0px;
+}
+ul.menu-horizontal,
+ul.menu-horizontal li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.hold_the_line div,
+.hold_the_line p,
+.hold_the_line h1,
+.hold_the_line h2,
+.hold_the_line h3,
+.hold_the_line h4,
+.hold_the_line h5,
+.hold_the_line h6,
+hold_the_line input,
+hold_the_line select {
+  display: inline-block;
+}
+
+.grouped * {
+  display: inline-block;
+}
+
+.sub-header * {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.sub-header input {
+  color: #000;
+}
+.sub-header,
+.sub-header h3 {
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+.pager > li {
+  margin: 0;
+  display: inline-block;
+}
+
+li.pager-item {
+  padding: 10px;
+}
+
+.header,
+.footer,
+.main {
+}
+
+.footer {
+  border: 0px;
+  border-top: 1px;
+  margin-top: 20px;
+  border-color: #efefef;
+  border-style: solid;
+}
+
+#sort_order {
+  float: right;
+}
+
+.pager {
+  text-align: right;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.cms_content a {
+  color: #007bff;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-item {
+  list-style-type: none;
+}
+
+.pager-link-selected {
+  font-weight: bold;
+}
+
+/* image in a containter to guarantee the 230px height for alignment other elements*/
+
+select.form-control,
+textarea.form-control,
+input[type="text"].form-control,
+input[type="password"].form-control,
+textarea.form-control {
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea.shopping-cart,
+input[type="text"].shopping-cart,
+input[type="password"].shopping-cart {
+  width: 60%;
+}
+
+textarea.form-control {
+  height: 300px;
+}
+
+select.form-control:not([readonly]):focus,
+input[type="text"].form-control:not([readonly]):focus,
+input[type="password"].form-control:not([readonly]):focus,
+textarea.form-control:not([readonly]):focus {
+  -webkit-appearance: none;
+  border-color: #00afe9;
+  outline: none;
+}
+
+input.form-control[readonly] {
+  outline: none;
+}
+
+input.form-control.has_error {
+  -webkit-appearance: none;
+  border-color: #aa0000;
+}
+
+input.form-control:read-only {
+  background-color: #eee;
+}
+
+input.form-control:-moz-read-only {
+  background-color: #eee;
+}
+
+.form-error {
+  font-size: 10px;
+}
+
+.clear_margins > div[class^="col"] {
+  margin-left: 0px;
+}
+
+.webshop_select_option {
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.checkout_total_line {
+  text-align: right;
+}
+
+.menu-collapse,
+.menu-collapse:hover {
+  background: #fff;
+}
+.menu-collapse i {
+  color: #000;
+}
+
+.menu {
+  height: 30px;
+}
+
+/* The snackbar for the cookie message  - middle and bottom  */
+#cookie-message {
+  visibility: hidden;
+  background-color: #ddd;
+  color: #000;
+  min-width: 550px; /* Set a default minimum width */
+  margin-left: -275px; /* Divide value of min-width by 2 */
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  bottom: 30px;
+}
+
+li.filter-block-header {
+  font-size: 20px;
+  font-weight: 900;
+  list-style-type: none;
+}
+
+#sw_shoppingcart_count {
+  font-size: 12px;
+
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  display: inline;
+}
+
+.shopping-cart-number {
+  position: absolute;
+  top: 2px;
+  left: 30px;
+  background: #000;
+  border-radius: 9px;
+}
+
+.wishlist-cart-number {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  height: 20px;
+  width: 20px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  background: #000;
+}
+
+#sw_wishlist_count {
+  font-size: 12px;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  display: inline;
+}
+
+.menu_customer {
+  display: none;
+  position: absolute;
+  font-size: 20px;
+  list-style-type: none;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  padding: 0px 40px 20px 20px;
+}
+
+.menu_customer a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+#sw_customer_options:hover + .menu_customer {
+  display: table-row-group;
+}
+
+.menu_customer:hover {
+  display: table-row-group;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  div.header .row [class^="col"] {
+    margin: 0px;
+  }
+  .visible-large {
+    display: none;
+  }
+  .visible-small {
+    display: block;
+  }
+
+  .menu {
+    display: inline-block;
+    background: #fff;
+    padding: 10px;
+    z-index: 999;
+    height: auto;
+  }
+
+  .main-menu ul.menu-level-0 li.menu-closed ul.menu-level-1 {
+    display: none;
+  }
+
+  .main-menu ul.menu-level-1 li.menu-closed ul.menu-level-2 {
+    display: none;
+  }
+
+  .main-menu .menu-level-1.open {
+    display: block;
+  }
+
+  .main-menu .main-menu li {
+    padding-left: 0em;
+  }
+  .main-menu ul.menu-level-0 {
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+
+  .main-menu ul.menu-level-0 > li.menu-closed.menu-has-children:before,
+  .main-menu ul.menu-level-1 > li.menu-closed.menu-has-children:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f067";
+    left: -1em;
+    color: #000;
+  }
+
+  .main-menu ul.menu-level-0 > li.menu-open.menu-has-children:before,
+  .main-menu ul.menu-level-1 > li.menu-open.menu-has-children:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f068";
+    left: -1em;
+    color: #000;
+  }
+
+  li.filter-block-header:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f067";
+    left: -1em;
+    color: #000;
+  }
+  li.filter-block-header.filter-open:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f068";
+    left: -1em;
+    color: #000;
+  }
+
+  div.filter-block-options {
+    display: none;
+  }
+
+  div.filter-block-options.filter-open {
+    display: block;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+
+  .menu-level-0 > li.menu-item {
+    color: #000;
+  }
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .filter-block {
+    margin-bottom: 20px;
+  }
+
+  .menu > ul {
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .visible-large {
+    display: block;
+  }
+  .visible-small {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .main-menu .menu-level-0 > li.menu-item a {
+    text-decoration: none;
+  }
+
+  .main-menu .menu-level-0 li.menu-item:hover .menu-level-1,
+  .menu-level-0 li.menu-item:hover .menu-level-2 {
+    display: block;
+  }
+
+  .main-menu .menu-collapse {
+    display: none;
+  }
+  .main-menu .menu-level-0 > li {
+    display: inline-block;
+  }
+
+  .main-menu .menu-level-1 > li {
+    display: block;
+    float: left;
+    padding: 10px;
+  }
+
+  .main-menu .menu-level-1 > li.menu-item a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .main-menu .menu-level-1 {
+    display: none;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    color: #000;
+    padding: 0px 40px 20px 20px;
+  }
+
+  .main-menu .menu-level-0 > li {
+    padding-right: 20px;
+  }
+
+  .menu-level-0 a {
+    color: white;
+  }
+
+  .main-menu .menu-level-0 > li.menu-item .has-cms-content a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* classes from the cms editor, these need to be preserved */
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+
+figure {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+figure figcaption {
+  font-size: 12px;
+}
+
+.search-wrapper {
+  display: inline-block;
+  position: relative;
+}
+.search-wrapper:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  top: 10px;
+  position: absolute;
+  right: 6px;
+  color: #000;
+}
+
+.large {
+  font-size: 40px;
+}
+
+#sw_customer_login:hover,
+#checkout_button:hover {
+  cursor: hand;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+.menu-navigator ul {
+  padding-left: 10px;
+}
+
+.menu-navigator li.menu-selected > a {
+  font-weight: bold;
+}
+
+ul.has-cms-content p {
+  color: #000;
+}
+
+@media screen and (max-width: 500px) {
+  [data-view="login-buttons"] {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+@import "elements/filter";
+@import "elements/navbar";
+@import "elements/footer";
+@import "elements/article";
+@import "elements/cart";

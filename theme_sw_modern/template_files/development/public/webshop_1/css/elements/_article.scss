@@ -1,0 +1,253 @@
+.products {
+  .product {
+    @media screen and (min-width: 576px) and (max-width: 1000px) {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding: 0px;
+    }
+  }
+}
+
+.product__content {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid transparent;
+  transition: all 300ms ease;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
+.product__discount {
+  /* Temporary convert to theme color of CMS */
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  right: 12px;
+  top: -12px;
+}
+
+.product__image {
+  aspect-ratio: 244 / 248;
+
+  img {
+    mix-blend-mode: darken;
+  }
+}
+
+.product__price {
+  /* Temporary convert to theme color of CMS */
+  color: white;
+  font-size: 14px;
+  min-height: 36px;
+}
+
+.product__price--discount {
+  font-size: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 1px;
+    background-color: white;
+    transform: rotate(-12deg);
+  }
+}
+
+.product__link {
+  /* Temporary convert to theme color of CMS */
+  background: black;
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+  transition: all 300ms ease;
+
+  i {
+    color: white;
+  }
+
+  /* Temporary convert to theme color of CMS */
+  &:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+
+    i {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.selected-products {
+  .container > .row > .row {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @media screen and (min-width: 992px) {
+      -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+}
+
+.selected-products,
+.overview-products {
+  margin-bottom: 96px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+  }
+}
+
+.overview-products {
+  .product {
+    @media (min-width: 992px) {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+/* image in a containter to guarantee the 230px height for alignment other elements*/
+.article_image_list_container {
+  height: 230px;
+}
+
+/* only work with max- in order to preserve image ratio*/
+.article_image_list > img {
+  max-height: 220px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* only work with max- in order to preserve image ratio*/
+.article_image_list_mini_container .article_image_list > img {
+  max-height: 130px;
+}
+
+.article_image_detail > img {
+  width: 95%;
+}
+
+.article_images_all {
+  margin-top: 36px;
+}
+
+.article_images_all > li {
+  margin: 0;
+  display: inline-block;
+}
+
+ul.article_images_all > li > img {
+  width: 89px;
+  height: 89px;
+  padding: 10px;
+  object-fit: contain;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+}
+div.article-list-small > p {
+  font-weight: 900;
+}
+
+.article_list_overlay {
+  position: relative;
+}
+
+.aio_rotated {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  width: 100px;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+
+  background-color: red;
+  opacity: 0.7;
+  color: #ffffff;
+  padding: 2px 10px 2px 10px;
+  z-index: 1;
+}
+
+.overlay-article {
+  background-color: red;
+}
+.overlay-discount {
+  background-color: green;
+}
+.overlay-new {
+  background-color: blue;
+}
+
+.zoom_overlay {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: 20px;
+  font-size: 30px;
+  background: none;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.aio_straight {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 100px;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+  background-color: green;
+  color: #ffffff;
+  padding: 2px 10px 2px 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .sw_block {
+    > div.row {
+      > .article_item_small {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  [data-view="article-detail"] {
+    > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sw_block {
+    > div.row {
+      > .article_item_small {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

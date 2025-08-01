@@ -1,0 +1,28 @@
+.breadcrumbs {
+  .btn-solid {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.breadcrumb-container {
+  width: auto;
+  margin: unset;
+  align-items: center;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: unset;
+  margin-bottom: unset;
+
+  a {
+    color: #000;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0px 4px;
+  }
+}

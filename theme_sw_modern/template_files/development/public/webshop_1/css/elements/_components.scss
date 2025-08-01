@@ -1,0 +1,107 @@
+select {
+  outline: none;
+  padding: 0 12px;
+  border: 0px;
+  height: 40px;
+}
+
+.pager-item {
+  &:not(:first-child):not(:last-child),
+  &:first-child:has(.pager-link-selected),
+  &:last-child:has(.pager-link-selected) {
+    .pager-link {
+      /* Temporary convert to theme color of CMS */
+      color: white;
+      background: black;
+      border: 1px solid black;
+      border-radius: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 36px;
+      text-decoration: none;
+      transition: all 300ms ease;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+
+  &:first-child:not(:has(.pager-link-selected)),
+  &:last-child:not(:has(.pager-link-selected)) {
+    .pager-link {
+      /* Temporary convert to theme color of CMS */
+      color: black;
+      text-decoration: none;
+
+      margin-left: 4px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.btn-solid {
+  transition: all 300ms ease;
+  padding: 4px 24px;
+  width: auto;
+  border-radius: 9999px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  margin-bottom: unset;
+  line-height: unset;
+  font-weight: 500;
+
+  &:hover {
+    background: white;
+    color: #000;
+    border-color: #000;
+  }
+}
+
+/* USPS */
+.usps {
+  margin-bottom: 96px;
+  border-bottom: 1px solid #f0f0f0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+  }
+}
+
+.paragraphs {
+  margin-bottom: 96px;
+
+  a {
+    color: black;
+    font-weight: bold;
+  }
+
+  .row + .row {
+    margin-top: 64px;
+  }
+
+  &:has(+ .overview-products) {
+    padding-bottom: 96px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+
+    &:has(+ .overview-products) {
+      padding-bottom: 36px;
+    }
+
+    .row + .row {
+      margin-top: 36px;
+    }
+  }
+}

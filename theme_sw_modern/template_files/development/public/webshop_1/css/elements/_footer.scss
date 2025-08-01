@@ -1,0 +1,24 @@
+.footer__top {
+  padding: 60px 0;
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__top {
+    padding: 36px 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+    }
+  }
+}
