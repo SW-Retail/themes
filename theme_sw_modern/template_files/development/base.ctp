@@ -36,7 +36,7 @@
 
 
     <!-- bootstrap -->
-    <link   rel="preload" as="style"  type="text/css" href="{sw_cdn_url}/plugins/bootstrap/css/bootstrap.min.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
+    <link   rel="preload" as="style"  type="text/css" href="{static_content}/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- master stylesheet -->
     <link rel="preload" as="style"  type="text/css" href="{static_content}/css/stylesheet.css?v={version}" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- some icons -->

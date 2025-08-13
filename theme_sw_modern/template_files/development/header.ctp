@@ -17,18 +17,62 @@
     {if_end}
 
     <!-- Navigation -->
-    <div class="tmplt_base_color tmplt_base_color_text navigationbar" >
-        <div class="container">
-            <div class="row navigation">
-                <div class="col-6">
-                    <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" style="max-width:300px;"/></a>
+
+    <nav class="navigation">
+        <div class="container h-100 position-relative z-2">
+            <div class="row h-100">
+                <div class="col-6 h-100 d-flex align-items-center navigation__logo">
+                    <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" /></a>
                 </div>
-                <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center">
+            </div>
+        </div>
+        <div class="fixed-nav container fixed-top d-flex justify-content-end align-items-center column-gap-3">
+
+            <div class="navigation__control">
+                <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
+                    <i class="fas fa-user-lock"></i>
+                </a>
+            </div>
+
+            <div class="navigation__control position-relative" id="checkout_button">
+                {block_declare:checkout_button}    
+                    <a class="bg-black rounded-circle d-flex justify-content-center align-items-center text-white" onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="shopping-cart-number tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span>
+                    </a>
+                {block_end}
+            </div>
+
+            <div class="navigation__control">
+                <button class="bg-black rounded-circle d-flex justify-content-center align-items-center text-white" id="menu-toggler" onclick="swShop.mobileMenuShow()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="bg-black rounded-circle d-flex justify-content-center align-items-center text-white" id="navCloser" onclick="swShop.mobileMenuShow(false);">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="row position-absolute top-100 start-4 end-4 start-lg-0 end-lg-0 bg-white shadow p-4 rounded-lg" id="sw_menu">
+                <div class="col-12">
                     <input class="form-control search-control"  type="text" value="" placeholder="Zoeken..."/>
                 </div>
-                <div class="col-6 col-lg-2 pr-4 d-flex align-items-center justify-content-end large">
+
+                <div class="col-12 position-relative main-menu">
+                    {block:menu:mainmenu:class=menu-horizontal:class=main-menu}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="navigationbar" >
+        <div class="container">
+            <div class="row navigation">
+                <div class="col-3">
+                    <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" style="max-width:225px;"/></a>
+                </div>
+                <div class="col-9">
                     <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="cursor-pointer"><i class="fas fa-user tmplt_attention_color"></i></a>
-                    <div  class="position-relative">
+                    <div class="position-relative">
                         <a class='sw_customer-options_button position-relative hide' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
                         {block:menu:customer-menu:class=menu_customer}
                     </div>
@@ -40,25 +84,14 @@
                         </a>
                         {block_end}
                     </div>
-                    <div id="checkout_button" class="position-relative pl-3">
-                        {block_declare:checkout_button}
-                        <a onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart" class="cursor-pointer">
-                            <i class="fas fa-shopping-cart tmplt_attention_color" ></i>
-                            <span class="shopping-cart-number badge-warning tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span>
-                        </a>
-                        {block_end}
-                    </div>
+                    
                 </div>
-                <div class="col-12 mt-3 d-block d-md-none"><i class="fas fa-bars" id="menu-toggler" onclick="swShop.mobileMenuShow()" data-menustyle="fancy"></i></div>
-            </div>
-            <div class="row main-navigation main-menu menu-mobile" id="sw_menu">
+                <div class="col-12 mt-3"><i class="fas fa-bars"  data-menustyle="fancy"></i></div>
+            </div> -->
+            <!-- <div class="row main-navigation main-menu menu-mobile" id="sw_menu">
                 <div id="navCloser" onclick="swShop.mobileMenuShow(false);"><i class="fas fa-times"></i></div>
-                <input class="form-control search-control d-block d-md-none"  type="text" value="" placeholder="Zoeken..."/>
-                {block:menu:mainmenu:class=menu-horizontal:class=menu-main}
-            </div>
-            <div class="row backdrop" id="backdropper">
-                <!-- -->
-            </div>
+                 -->
+            <!-- </div>
         </div>
-    </div>
+    </div> -->
 </div>

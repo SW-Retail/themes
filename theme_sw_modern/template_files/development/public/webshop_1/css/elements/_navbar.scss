@@ -1,253 +1,299 @@
-.shopping-cart-number {
-    position: absolute;
-    top: -10px;
-    right: -15px;
-    height: 20px;
-    width: 20px;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    color: #fff;
+.navigation,
+.fixed-nav {
+    height: 117px;
 }
 
-.menu_customer {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    z-index: 2;
-    display: none;
-    font-size: 20px;
-    list-style-type: none;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0px 40px 20px 20px;
-
-    a{
-        text-decoration: none;
-        color:#000;
-        font-size:15px;
-    }
-
-    &:hover{
-        display:table-row-group;
-    }
+.main-menu {
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 }
 
-.main-menu{
-    a{
-        text-decoration: none;
-    }
-}
-
-#sw_customer_options:hover + .menu_customer{
-    display:table-row-group;
-}
-
-.headertop{
-    ul{
-        margin-right: 0;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-    }
-}
-
-.navigationbar{
-    .navigation{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    .main-navigation{
-        display: flex;
-        justify-content: start;
-        position: relative;
-
-        >div#navCloser{
-            display: none;
-        }
-    }
-    #menu-toggler, #navCloser{
+.navigation__control {
+    > a,
+    > button {
+        height: 44px;
+        width: 44px;
+        font-size: 14px;
         cursor: pointer;
-    }
-}
+        transition: all 300ms ease;
+        text-decoration: none;
+        margin-bottom: 0;
 
-@media screen and (min-width: 768px){
-    .navigationbar{
-        .main-navigation{
-            .menu-level-2{
-                padding-left: 0;
-            }
+        &:hover {
+            background: white !important;
+            border: 1px solid black !important;
+            color: black !important;
         }
     }
 }
 
-@media screen and (max-width: 767px){
-    .headergrey{
-        overflow: hidden;
+.navigation {
+    #navCloser {
+        display: none !important;
+    }
+    &:has(#sw_menu.active) {
+        #menu-toggler {
+            display: none !important;
+        }
+
+        #navCloser {
+            display: flex !important;
+        }
+    }
+}
+
+@media (min-width: 1177px) {
+  .navigation__logo {
+    max-width: 225px;
+  }
+
+  .main-menu {
+    margin-top: 24px;
+    max-height: 50vh;
+    height: 50vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    .menu-item {
+      width: 200px;
+
+      > a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 12px;
+        text-decoration: none;
+        color: #000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      &:first-child > a {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
     }
 
-    .navigationbar{
-        .main-navigation{
-            position: absolute;
-            top: 0;
-            right: -300px;
-            height: 100vh;
-            background-color: #fff;
-            width: 300px;
-            z-index: 3;
-            transition: ease .3s;
-            position: fixed;
-            overflow-y: scroll;
+    .menu-item > ul {
+      position: absolute;
+      top: 0;
+      left: 212px;
+      width: 212px;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
 
-            input{
-                margin-top: 45px;
-                padding-left: 1rem!important;
-                padding-right: 1rem!important;
+      > li > ul {
+        left: 212px;
+      }
+    }
+
+    .menu-has-children {
+      > a {
+        position: relative;
+        padding-right: 24px;
+
+        &::after {
+          content: "\f0da";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 700;
+          position: absolute;
+          right: 12px;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &:hover {
+        > a {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        > ul {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    .menu-level-0 .menu-has-children > ul {
+      padding-left: 12px;
+    }
+
+    .menu-level-0 li.menu-item:hover .menu-level-1,
+    .menu-level-0 li.menu-item:hover .menu-level-2 {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .navigation__logo {
+    max-width: 150px;
+  }
+
+  .main-menu {
+    ul.menu-level-0 li.menu-closed ul.menu-level-1,
+    ul.menu-level-1 li.menu-closed ul.menu-level-2 {
+      display: none;
+    }
+
+    .menu-level-1.open {
+      display: block;
+    }
+
+    li {
+      padding-left: 0;
+    }
+
+    ul.menu-level-0 {
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+  }
+
+  .navigation {
+    .main-menu {
+        padding-top: 24px;
+        max-height: 50vh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+      input {
+        margin-top: 45px;
+        padding: 0 1rem !important;
+        height: 40px;
+      }
+
+      &.active {
+        right: -5px;
+        transition: ease 0.3s;
+      }
+
+      > div#navCloser {
+        display: block;
+        position: absolute;
+        top: 12.5px;
+        right: 2rem;
+
+        > i {
+          float: right;
+        }
+      }
+
+      .menu-level-0 {
+        width: 100%;
+
+        > li {
+          padding: 12px 2rem 0;
+          border-bottom: 1px solid #ebebeb;
+          min-height: 50px;
+          position: relative;
+
+          &:first-child {
+            border-top: 1px solid #ebebeb;
+          }
+
+          &.menu-has-children {
+            cursor: pointer;
+
+            &.menu-closed:after,
+            &.menu-open:after {
+              font-family: "Font Awesome 5 Free";
+              font-size: 1rem;
+              color: #6f6f6f;
+              position: absolute;
+              right: 2rem;
+              top: 12.5px;
+              font-weight: 900;
             }
-            
-            &.active{
-                right: -5px;
-                transition: ease .3s;
+            &.menu-closed:after {
+              content: "\f078";
             }
-            
-            >div#navCloser{
-                display: block;
+            &.menu-open:after {
+              content: "\f077";
+            }
+          }
+        }
+
+        .menu-level-1 {
+          > li {
+            padding: 12px 1rem 0;
+            min-height: 25px;
+            position: relative;
+
+            &:last-child {
+              margin-bottom: 1rem;
+            }
+
+            &.menu-has-children {
+              cursor: pointer;
+
+              &.menu-closed:after,
+              &.menu-open:after {
+                font-family: "Font Awesome 5 Free";
+                font-size: 1rem;
+                color: #6f6f6f;
                 position: absolute;
-                top: 12.5px;
                 right: 2rem;
-                >i{
-                    float: right;
-                }
+                top: 12.5px;
+                font-weight: 900;
+              }
+              &.menu-closed:after {
+                content: "\f078";
+              }
+              &.menu-open:after {
+                content: "\f077";
+              }
             }
-
-            >input{
-                height: 40px;
-            }
-
-            .menu-level-0{
-                width: 100%;
-                position: absolute;
-                top: 100px;
-
-                >li{
-                    padding-right: 2rem;
-                    border-bottom: 1px solid #ebebeb;
-                    min-height: 50px;
-                    position: relative;
-                    padding-top: 12px;
-                    padding-left: 2rem;
-
-                    &:before{
-                        display: none;
-                    }
-
-                    &:first-child{
-                        border-top: 1px solid #ebebeb;
-                    }
-
-                    &.menu-has-children{
-                        cursor: pointer;
-                        &.menu-closed{
-                            &:after{
-                                content: '\f078';
-                                font-family: 'Font Awesome 5 Free';
-                                font-size: 1rem;
-                                color: #6f6f6f;
-                                position: absolute;
-                                left: unset;
-                                right: 2rem;
-                                top: 12.5px;
-                                font-weight: 900;
-                            }
-                        }
-                        &.menu-open{
-                            &:after{
-                                content: '\f077';
-                                font-family: 'Font Awesome 5 Free';
-                                font-size: 1rem;
-                                color: #6f6f6f;
-                                position: absolute;
-                                left: unset;
-                                right: 2rem;
-                                top: 12.5px;
-                                font-weight: 900;
-                            }
-                        }
-                    }
-                }
-
-                .menu-level-1{
-                    >li{
-                        padding-right: 1rem;
-                        padding-left: 1rem;
-                        padding-top: 12px;
-                        min-height: 25px;
-                        position: relative;
-
-                        &:before{
-                            display: none;
-                        }
-
-                        &.menu-has-children{
-                            cursor: pointer;
-                            &.menu-closed{
-                                &:after{
-                                    content: '\f078';
-                                    font-family: 'Font Awesome 5 Free';
-                                    font-size: 1rem;
-                                    color: #6f6f6f;
-                                    position: absolute;
-                                    left: unset;
-                                    right: 2rem;
-                                    top: 12.5px;
-                                    font-weight: 900;
-                                }
-                            }
-                            &.menu-open{
-                                &:after{
-                                    content: '\f077';
-                                    font-family: 'Font Awesome 5 Free';
-                                    font-size: 1rem;
-                                    color: #6f6f6f;
-                                    position: absolute;
-                                    left: unset;
-                                    right: 2rem;
-                                    top: 12.5px;
-                                    font-weight: 900;
-                                }
-                            }
-                        }
-
-                        &:last-child{
-                            margin-bottom: 1rem;
-                        }
-                    }
-                }
-
-                .menu-level-2{
-                    >li{
-                        padding-left: 0;
-                    }
-                }
-            }
+          }
         }
-        
-        .backdrop{
-            &.active{
-                background-color: rgba(0,0,0,0.2);
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 100vh;
-                z-index: 2;
-                position: fixed;
-            }
+
+        .menu-level-2 {
+          > li {
+            padding-left: 12px;
+          }
         }
-        .icon-bar{
-            top: 50%;
-        }
+      }
     }
+
+    .backdrop.active {
+      background-color: rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 2;
+    }
+
+    .icon-bar {
+      top: 50%;
+    }
+  }
+}
+
+#sw_menu {
+  display: none;
+
+  &.active {
+    display: block;
+  }
 }

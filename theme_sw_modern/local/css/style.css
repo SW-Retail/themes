@@ -502,3 +502,306 @@
     margin-top: 8px;
   }
 }
+
+/* Navigation */
+@media (min-width: 1177px) {
+  .main-menu {
+    margin-top: 24px;
+    max-height: 50vh;
+    height: 50vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    ul,
+    ol {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .menu-item {
+      width: 200px;
+
+      > a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 12px;
+        text-decoration: none;
+        color: #000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      &:first-child > a {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .menu-item > ul {
+      position: absolute;
+      top: 0;
+      left: 212px;
+      width: 212px;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+
+      > li > ul {
+        left: 212px;
+      }
+    }
+
+    .menu-has-children {
+      > a {
+        position: relative;
+        padding-right: 24px;
+
+        &::after {
+          content: "\f0da";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 700;
+          position: absolute;
+          right: 12px;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &:hover {
+        > a {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        > ul {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    .menu-level-0 .menu-has-children > ul {
+      padding-left: 12px;
+    }
+
+    .menu-level-0 li.menu-item:hover .menu-level-1,
+    .menu-level-0 li.menu-item:hover .menu-level-2 {
+      display: block;
+    }
+  }
+}
+
+#sw_menu {
+  /* display: none; */
+  display: block;
+
+  &.active {
+    display: block;
+  }
+}
+
+.main-menu {
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+
+@media screen and (max-width: 1176px){
+  .main-menu ul.menu-level-0 li.menu-closed ul.menu-level-1 {
+    display: none;
+  }
+
+  .main-menu ul.menu-level-1 li.menu-closed ul.menu-level-2 {
+    display: none;
+  }
+
+  .main-menu .menu-level-1.open {
+    display: block;
+  }
+
+  .main-menu .main-menu li {
+    padding-left: 0em;
+  }
+  .main-menu ul.menu-level-0 {
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+
+  .main-menu ul.menu-level-0 > li.menu-closed.menu-has-children:before,
+  .main-menu ul.menu-level-1 > li.menu-closed.menu-has-children:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f067";
+    left: -1em;
+    color: #000;
+  }
+
+  .main-menu ul.menu-level-0 > li.menu-open.menu-has-children:before,
+  .main-menu ul.menu-level-1 > li.menu-open.menu-has-children:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f068";
+    left: -1em;
+    color: #000;
+  }
+  
+  .navigation{
+      .main-menu{
+          input{
+              margin-top: 45px;
+              padding-left: 1rem!important;
+              padding-right: 1rem!important;
+          }
+            
+          &.active{
+              right: -5px;
+              transition: ease .3s;
+          }
+            
+          >div#navCloser{
+              display: block;
+              position: absolute;
+              top: 12.5px;
+              right: 2rem;
+              >i{
+                  float: right;
+              }
+          }
+
+          >input{
+              height: 40px;
+          }
+
+          .menu-level-0{
+              width: 100%;
+              >li{
+                  padding-right: 2rem;
+                  border-bottom: 1px solid #ebebeb;
+                  min-height: 50px;
+                  position: relative;
+                  padding-top: 12px;
+                  padding-left: 2rem;
+
+                  &:before{
+                      display: none;
+                  }
+
+                  &:first-child{
+                      border-top: 1px solid #ebebeb;
+                  }
+
+                  &.menu-has-children{
+                      cursor: pointer;
+                      &.menu-closed{
+                          &:after{
+                              content: '\f078';
+                              font-family: 'Font Awesome 5 Free';
+                              font-size: 1rem;
+                              color: #6f6f6f;
+                              position: absolute;
+                              left: unset;
+                              right: 2rem;
+                              top: 12.5px;
+                              font-weight: 900;
+                          }
+                      }
+                      &.menu-open{
+                          &:after{
+                              content: '\f077';
+                              font-family: 'Font Awesome 5 Free';
+                              font-size: 1rem;
+                              color: #6f6f6f;
+                              position: absolute;
+                              left: unset;
+                              right: 2rem;
+                              top: 12.5px;
+                              font-weight: 900;
+                          }
+                      }
+                  }
+              }
+
+              .menu-level-1{
+                  >li{
+                      padding-right: 1rem;
+                      padding-left: 1rem;
+                      padding-top: 12px;
+                      min-height: 25px;
+                      position: relative;
+
+                      &:before{
+                          display: none;
+                      }
+
+                      &.menu-has-children{
+                          cursor: pointer;
+                          &.menu-closed{
+                              &:after{
+                                  content: '\f078';
+                                  font-family: 'Font Awesome 5 Free';
+                                  font-size: 1rem;
+                                  color: #6f6f6f;
+                                  position: absolute;
+                                  left: unset;
+                                  right: 2rem;
+                                  top: 12.5px;
+                                  font-weight: 900;
+                              }
+                          }
+                          &.menu-open{
+                              &:after{
+                                  content: '\f077';
+                                  font-family: 'Font Awesome 5 Free';
+                                  font-size: 1rem;
+                                  color: #6f6f6f;
+                                  position: absolute;
+                                  left: unset;
+                                  right: 2rem;
+                                  top: 12.5px;
+                                  font-weight: 900;
+                              }
+                          }
+                      }
+
+                      &:last-child{
+                          margin-bottom: 1rem;
+                      }
+                  }
+              }
+
+              .menu-level-2{
+                  >li{
+                      padding-left: 0;
+                  }
+              }
+          }
+      }
+        
+      .backdrop{
+          &.active{
+              background-color: rgba(0,0,0,0.2);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: 100vh;
+              z-index: 2;
+              position: fixed;
+          }
+      }
+      .icon-bar{
+          top: 50%;
+      }
+  }
+}
