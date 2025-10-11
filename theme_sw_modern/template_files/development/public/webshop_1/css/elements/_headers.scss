@@ -257,3 +257,28 @@
     padding-bottom: 36px !important;
   }
 }
+
+.size__add-to-cart {
+  .input-group {
+    margin-top: 12px !important;
+    align-items: center;
+    column-gap: 12px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: self-start;
+      row-gap: 12px;
+
+      input {
+        width: auto !important;
+      }
+    }
+  }
+}
+
+.size__add {
+  input {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+  }
+}
