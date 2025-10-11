@@ -6,11 +6,11 @@
 {if_end}
 
 {if:current_cat.cms_show_cat_blocks:<>:only_cat}
-    <section class="products" aria-labelledby="overview-products__title">
+    <section class="products mb-3 mb-lg-5" aria-labelledby="overview-products__title">
         <div class="container">
-            <div class="row ml-0 mr-0 g-4">
+            <div class="row g-4">
                 <div class="col-12 p-0">
-                    <div class="row ml-0 mr-0 g-4 mb-1 mb-md-3">
+                    <div class="row g-4 mb-1 mb-md-3">
                         <div class="col-12 col-sm-3 h-100 d-flex align-items-center p-0">
                             <span class="products__filter-title d-block pb-1 fs-4 fw-bold w-100">{breadcrumb_content}</span>
                         </div>
@@ -37,11 +37,11 @@
                     <i class="fas fa-filter"></i> <p>Filter</p>
                 </div>
                 <div class="col-12 col-md-9 p-0">
-                    <div class="row g-4 gy-lg-5">
+                    <div class="row g-4 product__items">
                         {page_data}
                     </div>
                     <div class="col-12 pt-3 pt-lg-4 p-0">
-                        <div class="row ml-0 mr-0 gx-4 gy-1">
+                        <div class="row gx-4 gy-1">
                             <div class="col-12 col-sm-4 d-flex align-items-center justify-content-center justify-content-sm-start fs-6 p-0">
                                 <p>{*theme_article_amounts}</p>
                             </div>

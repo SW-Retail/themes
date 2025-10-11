@@ -41,7 +41,7 @@
 
 {block_declare:article_default}
 
-<nav class="breadcrumbs mt-5">
+<nav class="breadcrumbs pt-3 pt-lg-5">
     <div class="container">
         <div class="row flex-wrap gap-3">
             <button class="btn-solid tmplt_base_color tmplt_base_color_text" onclick="swShop.gotoPreviousURL();return false;">{_Terug}</button>
@@ -50,12 +50,12 @@
     </div>
 </nav>
 
-<section class="header--product mt-5" aria-labelledby="header__title">
+<section class="header--product pt-5" aria-labelledby="header__title">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-10 ms-auto me-auto">
+            <div class="col-12 ps-0 pe-0 col-md-10 ms-auto me-auto">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 ps-0 pe-0 col-lg-6">
                         <div class="header__images">
                             {block_declare:article_image_detail}
                                 <div class="article_image_detail"><img src="/image/{article_image:0}" alt="{article_image_alt:0}"/></div>
@@ -63,11 +63,11 @@
                             {block_end}
                         </div>
                     </div>
-                    <div class="ms-auto col-12 col-lg-5">
+                    <div class="ms-auto col-12 ps-0 pe-0 col-lg-5">
                         <span class="header__subtitle">{*theme_article_description}</span>
                         <h1 id="header__title">{*article_name}</h1>
 
-                        <div class="col-12">
+                        <div class="col-12 ps-0 pe-0">
                             <div class="{uitoggle_pricing_normal}">
                                 <span class="header__price position-relative d-block fw-bold">{sap_price:format:currency}</span>
                             </div>
@@ -77,7 +77,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12 ps-0 pe-0">
                             {define_c:st_pr_sizeselect:1}
 
                             {if:st_pr_sizeselect:=:1}
@@ -88,17 +88,17 @@
                             {if_end}
                         </div>
 
-                        <div class="col-12">
-                            <div class="col-12">
+                        <div class="col-12 ps-0 pe-0">
+                            <div class="col-12 ps-0 pe-0">
                                 {*article_information}
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 ps-0 pe-0">
                                 {article_freefields}
                             </div>
                         </div>
 
                         {if:st_pr_sizeselect:=:1}
-                            <div class="col-12">
+                            <div class="col-12 ps-0 pe-0">
                                 {block:cart_button}
                             </div>
                         {if_end}

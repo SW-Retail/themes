@@ -19,19 +19,21 @@
     <!-- Navigation -->
 
     <nav class="navigation">
-        <div class="container h-100 position-relative z-2">
+        <div class="container h-100 position-relative">
             <div class="row h-100">
-                <div class="col-6 h-100 d-flex align-items-center navigation__logo">
+                <div class="col-6 h-100 d-flex align-items-center navigation__logo ps-0 pr-0">
                     <a href="/"><img class="img-fluid" src="/{shoplogo}" title="{shopname}" /></a>
                 </div>
             </div>
         </div>
-        <div class="fixed-nav container fixed-top d-flex justify-content-end align-items-center column-gap-3">
+        <div class="fixed-nav container fixed-top d-flex justify-content-end align-items-center column-gap-2 column-gap-lg-3">
 
-            <div class="navigation__control">
+            <div class="navigation__control navigation__control--user">
                 <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
                     <i class="fas fa-user-lock"></i>
                 </a>
+                <a class='sw_customer-options_button position-relative navigation__control bg-black rounded-circle d-flex justify-content-center align-items-center text-white hide' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
+                {block:menu:customer-menu:class=menu_customer}
             </div>
 
             <div class="navigation__control position-relative" id="checkout_button">
@@ -39,6 +41,15 @@
                     <a class="bg-black rounded-circle d-flex justify-content-center align-items-center text-white" onclick="swShopHelper.loadCheckout();return false;" id="sw_shoppingcart">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="shopping-cart-number tmplt_sales_color" id="sw_shoppingcart_count">{amount_in_cart}</span>
+                    </a>
+                {block_end}
+            </div>
+
+            <div class="navigation__control position-relative {uitoggle_wishlist_active}" id="sw_wishlist">
+                {block_declare:wishlist_button}
+                    <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="bg-black rounded-circle d-flex justify-content-center align-items-center text-white">
+                        <i class="fas fa-heart tmplt_attention_color" ></i>
+                        <span class="wishlist-cart-number tmplt_sales_color" id="sw_wishlist_count">{amount_in_wishlist}</span>
                     </a>
                 {block_end}
             </div>
@@ -72,10 +83,7 @@
                 </div>
                 <div class="col-9">
                     <a onclick="swCustomer.loadCustomerLogin()" id="sw_customer_login" class="cursor-pointer"><i class="fas fa-user tmplt_attention_color"></i></a>
-                    <div class="position-relative">
-                        <a class='sw_customer-options_button position-relative hide' id="sw_customer_options" > <i class="fas fa-user-check tmplt_attention_color "></i></a>
-                        {block:menu:customer-menu:class=menu_customer}
-                    </div>
+                    
                     <div id="wishlist_button" class="position-relative pl-3 {uitoggle_wishlist_active}">
                         {block_declare:wishlist_button}
                         <a onclick="swShopHelper.loadWishlist();return false;" id="sw_wishlist" class="cursor-pointer">
