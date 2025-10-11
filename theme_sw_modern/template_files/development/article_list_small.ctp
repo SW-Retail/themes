@@ -8,7 +8,7 @@
 <article class="product col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print" data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
     <div class="col-12 product__content px-3 pt-3 pb-4 position-relative h-100">
         {if:overlay_text:<>:}
-            <span class="product__discount position-absolute tmplt_base_color tmplt_base_color_text">{overlay_text}</span>
+            <span class="product__discount position-absolute tmplt_sales_color tmplt_base_color_text">{overlay_text}</span>
         {if_end}
         <div class="product__image d-flex align-items-center justify-content-center p-3">
             {if:has_image:=:false}
@@ -39,7 +39,7 @@
     <article class="product" role="region" aria-label="Blouse met print" data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
         <div class="col-12 product__content px-3 pt-3 pb-4 position-relative h-100">
             {if:overlay_text:<>:}
-                <span class="product__discount position-absolute tmplt_base_color tmplt_base_color_text">{overlay_text}</span>
+                <span class="product__discount position-absolute tmplt_sales_color tmplt_base_color_text">{overlay_text}</span>
             {if_end}
             <div class="product__image d-flex align-items-center justify-content-center p-3">
                 {if:has_image:=:false}

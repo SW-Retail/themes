@@ -39,8 +39,6 @@
 
 .overview__cart {
   button {
-    /* Temporary convert to theme color of CMS */
-    background: black;
     border: 1px solid black;
     color: white;
     font-size: 12px;
@@ -54,7 +52,6 @@
       color: white;
     }
 
-    /* Temporary convert to theme color of CMS */
     &:hover {
       background-color: white;
       color: black;
@@ -69,8 +66,6 @@
 }
 
 .product__discount {
-  /* Temporary convert to theme color of CMS */
-  color: white;
   font-size: 12px;
   padding: 4px 10px;
   right: 12px;
@@ -86,8 +81,6 @@
 }
 
 .product__price {
-  /* Temporary convert to theme color of CMS */
-  color: white;
   font-size: 14px;
   min-height: 36px;
 }
@@ -107,8 +100,6 @@
 }
 
 .product__link {
-  /* Temporary convert to theme color of CMS */
-  background: black;
   border: 1px solid black;
   color: white;
   font-size: 12px;

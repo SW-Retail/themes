@@ -1025,7 +1025,6 @@ select {
 }
 
 .pager-item:not(:first-child):not(:last-child) .pager-link, .pager-item:first-child:has(.pager-link-selected) .pager-link, .pager-item:last-child:has(.pager-link-selected) .pager-link {
-  /* Temporary convert to theme color of CMS */
   color: white;
   background: black;
   border: 1px solid black;
@@ -1045,7 +1044,6 @@ select {
   color: black;
 }
 .pager-item:first-child:not(:has(.pager-link-selected)) .pager-link, .pager-item:last-child:not(:has(.pager-link-selected)) .pager-link {
-  /* Temporary convert to theme color of CMS */
   color: black;
   text-decoration: none;
   margin-left: 4px;
@@ -1702,7 +1700,6 @@ select {
   font-size: 12px;
   text-decoration: none;
   transition: all 300ms ease;
-  /* Temporary convert to theme color of CMS */
   border: 1px solid black;
 }
 .header__button .btn--solid-theme:hover {
@@ -1856,8 +1853,6 @@ select {
 }
 
 .overview__cart button {
-  /* Temporary convert to theme color of CMS */
-  background: black;
   border: 1px solid black;
   color: white;
   font-size: 12px;
@@ -1866,7 +1861,6 @@ select {
   text-decoration: none;
   transition: all 300ms ease;
   border-radius: 100%;
-  /* Temporary convert to theme color of CMS */
 }
 .overview__cart button i {
   color: white;
@@ -1882,8 +1876,6 @@ select {
 }
 
 .product__discount {
-  /* Temporary convert to theme color of CMS */
-  color: white;
   font-size: 12px;
   padding: 4px 10px;
   right: 12px;
@@ -1898,8 +1890,6 @@ select {
 }
 
 .product__price {
-  /* Temporary convert to theme color of CMS */
-  color: white;
   font-size: 14px;
   min-height: 36px;
 }
@@ -1918,8 +1908,6 @@ select {
 }
 
 .product__link {
-  /* Temporary convert to theme color of CMS */
-  background: black;
   border: 1px solid black;
   color: white;
   font-size: 12px;
