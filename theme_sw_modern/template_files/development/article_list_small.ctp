@@ -6,17 +6,20 @@
 
 {if:slider:=:0}
 <article class="product col-12 col-sm-6 col-lg-4" role="region" aria-label="Blouse met print" data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
+    {block:article_list_small_top:optional}
     <div class="col-12 product__content px-3 pt-3 pb-4 position-relative h-100">
         {if:overlay_text:<>:}
             <span class="product__discount position-absolute tmplt_sales_color tmplt_base_color_text">{overlay_text}</span>
         {if_end}
-        <div class="product__image d-flex align-items-center justify-content-center p-3">
-            {if:has_image:=:false}
-                <img class="h-100 w-100 object-fit-contain" src="{article_image:0}" alt="{article_image_alt:0}"/>
-            {if_end}
-            {if:has_image:=:true}
-                <img class="h-100 w-100 object-fit-contain" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
-            {if_end}
+        <div class="product__image d-flex align-items-center justify-content-center p-3 article_image_list_mini_container">
+            <div class="article_image_list h-100 w-100">
+                {if:has_image:=:false}
+                    <img class="h-100 w-100 object-fit-contain" src="{article_image:0}" alt="{article_image_alt:0}"/>
+                {if_end}
+                {if:has_image:=:true}
+                    <img class="h-100 w-100 object-fit-contain" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
+                {if_end}
+            </div>
         </div>
         <div class="product__text text-center">
             <h3 class="fs-5 fw-normal">{*article_name}</h3>
@@ -29,6 +32,7 @@
             </div>
         </div>
     </div>
+    {block:article_list_small_bottom:optional}
 </article>
 {if_end}
 

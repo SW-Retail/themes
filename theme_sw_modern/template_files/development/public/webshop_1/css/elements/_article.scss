@@ -112,7 +112,6 @@
     color: white;
   }
 
-  /* Temporary convert to theme color of CMS */
   &:hover {
     background-color: white;
     color: black;
@@ -172,24 +171,6 @@
       max-width: 25%;
     }
   }
-}
-
-/* image in a containter to guarantee the 230px height for alignment other elements*/
-.article_image_list_container {
-  height: 230px;
-}
-
-/* only work with max- in order to preserve image ratio*/
-.article_image_list > img {
-  max-height: 220px;
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
-/* only work with max- in order to preserve image ratio*/
-.article_image_list_mini_container .article_image_list > img {
-  max-height: 130px;
 }
 
 .article_image_detail > img {
