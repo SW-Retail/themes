@@ -640,7 +640,7 @@ input[type='checkbox'] {
 }
 
 /* mobile */
-@media (max-width: 768px){
+@media (max-width: 992px){
    .icon-bar {
     top:50%;
   }
@@ -843,7 +843,7 @@ input[type='checkbox'] {
     
 }
 
-@media (min-width: 577px) and (max-width: 767px){
+@media (min-width: 577px) and (max-width: 992px){
     .mob-t-1{
         margin-top:1rem;
     }
@@ -1258,4 +1258,5 @@ box-shadow:none;
     position:relative;
     box-shadow:none;
 }
+
 
