@@ -82,7 +82,7 @@ ul.article_images_all > li > img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .article_content #article_original_price {
     font-size: 18px;
   }
@@ -374,7 +374,7 @@ fieldset[disabled] .btn-headerimg.active {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .headergrey {
     overflow: hidden;
   }
@@ -578,7 +578,7 @@ fieldset[disabled] .btn-headerimg.active {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   [data-view="filter"] {
     position: fixed;
     top: 0;
@@ -1376,7 +1376,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 /* mobile */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   div.header .row [class^=col] {
     margin: 0px;
   }
