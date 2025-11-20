@@ -3,6 +3,7 @@
 {remark: renders articles in a small list}
 
 {define_c:slider:0}
+{define_c:size:0}
 
 {if:slider:=:0}
     <div class="col-6 col-md-3 article_item_small mb-5"  data-id="{article_id}" data-link="{article_link}" onclick="swShop.articleLoad(this);">
@@ -15,7 +16,15 @@
                             <img class="img-fluid" src="{article_image:0}" alt="{article_image_alt:0}"/>
                         {if_end}
                         {if:has_image:=:true}
-                            <img class="img-fluid" src="/image/small/{article_image:0}" alt="{article_image_alt:0}"/>
+                            {if:size:=:0}
+                                <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
+                            {if_end}
+                            {if:size:=:1}
+                                <img src="image/small/{article_image:0}" alt="{article_image_alt:0}"/>
+                            {if_end}
+                            {if:size:=:2}
+                            <img src="image/{article_image:0}" alt="{article_image_alt:0}"/>
+                            {if_end}
                         {if_end}
                     </div>
                 </div>
@@ -63,7 +72,15 @@
                                     <img src="{article_image:0}" alt="{article_image_alt:0}"/>
                                 {if_end}
                                 {if:has_image:=:true}
-                                    <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
+                                    {if:size:=:0}
+                                        <img src="image/mini/{article_image:0}" alt="{article_image_alt:0}"/>
+                                    {if_end}
+                                    {if:size:=:1}
+                                        <img src="image/small/{article_image:0}" alt="{article_image_alt:0}"/>
+                                    {if_end}
+                                    {if:size:=:2}
+                                    <img src="image/{article_image:0}" alt="{article_image_alt:0}"/>
+                                    {if_end}
                                 {if_end}
                             </div>
                         </div>
@@ -75,4 +92,5 @@
         </div>
     </li>
 {if_end}
+
 
