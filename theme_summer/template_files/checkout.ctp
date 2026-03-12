@@ -125,6 +125,20 @@
             </div>
         </div>
 
+        <div class="col-md-4 {uitoggle_storecredit_redeem}">
+            <div class="row">
+                <div class="col-12" >
+                    <h3>{_Tegoedbon}</h3>
+                    <!-- form name is hardcoded in the backend -->
+                    {form:storecreditcode}
+                    <p>{_Ik heb een tegoedbon}</p>
+                    {input:storecreditcode:class=hold_the_line}
+                    {form_submit:Tegoedbon toevoegen}
+                    {form_end}
+                </div>
+            </div>
+        </div>
+
         <div class="col-md-4 {uitoggle_loyalty_discount}" >
             <div class="row">
                 <div class="col-12" >
@@ -428,3 +442,4 @@
 
 
 {templater_stop}
+
