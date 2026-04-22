@@ -398,7 +398,7 @@
             <div class="row">
                 <div class="col-10">
                     {if:checkout_terms_and_conditions_text:=:} 
-                        Ik heb de algemene voorwaarden gelezen
+                        {_Ik heb de algemene voorwaarden gelezen}
                     {if_end}
 
                     {checkout_terms_and_conditions_text}
