@@ -408,7 +408,11 @@
             {form:terms_and_conditions}
             <div class="row">
                 <div class="col-10">
-                    Ik heb de algemene voorwaarden gelezen
+                    {if:checkout_terms_and_conditions_text:=:} 
+                        Ik heb de algemene voorwaarden gelezen
+                    {if_end}
+
+                    {checkout_terms_and_conditions_text}
                 </div>
                 <div class="col-2 checkout_total_line">
                     {checkbox:consent:validate_notempty}
