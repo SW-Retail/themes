@@ -115,14 +115,19 @@
 
                 </div>
                 <div class="col-12 mb-3">
-                    <div class="{uitoggle_pricing_normal}">
-                        <h1 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h1>
-                    </div>
-                    <div class="{uitoggle_pricing_discount}">
-                        <h3 id="article_original_price" class="tmplt_attention_color" style="text-decoration: line-through"> {sap_original_price:format:currency}</h3>
-                        <p>{sap_description}  Nu Voor</p>
-                        <h1 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h1>
-                    </div>
+                    {if:sap_has_discount:<>:true}
+                        <div>
+                            <h2 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h2>
+                        </div>
+                    {if_end}
+                    {if:sap_has_discount:=:true}
+                        <div>
+                            <h3 id="article_original_price" class="tmplt_attention_color" style="text-decoration: line-through"> {sap_original_price:format:currency}</h3>
+                            <p>{sap_description}  Nu Voor</p>
+
+                            <h2 id="article_baseprice" class="tmplt_attention_color"> {sap_price:format:currency}</h2>
+                        </div>
+                    {if_end}
                 </div>
 
                 <div class="col-12">
